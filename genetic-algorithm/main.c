@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <time.h>
+#include <math.h>
+#include <stdlib.h>
 
 #define POPULATION_SIZE 100
 
@@ -41,7 +43,21 @@ void calculate_fitness(solution sol[])
 			 sol[i].vet[2]*100 +   // N
 			 sol[i].vet[1]*10 +    // E
 			 sol[i].vet[7]));      // Y
+      sol[i].fitness = labs(sol[i].fitness);
     }
+}
+
+void tournment_selection(solution sol[])
+{
+  printf("Selecting three candidates\n");
+  int c1 = rand() % POPULATION_SIZE;
+  int c2 = rand() % POPULATION_SIZE;
+  int c3 = rand() % POPULATION_SIZE;
+
+  printf("Selecteds:\n");
+  printf("Candidate1: %d with fitness %d\n", c1, sol[c1].fitness);
+  printf("Candidate2: %d with fitness %d\n", c2, sol[c2].fitness);
+  printf("Candidate2: %d with fitness %d\n", c3, sol[c3].fitness);
 }
 
 solution random_candidate()
@@ -93,7 +109,7 @@ void bubble_sort(solution sol[])
     {
       for(j = 0; j < POPULATION_SIZE; j++)
 	{
-	  if(sol[i].fitness > sol[j].fitness)
+	  if(sol[i].fitness < sol[j].fitness)
 	    {
 	      s = sol[i];
 	      sol[i] = sol[j];
@@ -113,9 +129,10 @@ int main()
     {
       sol[i] = random_candidate();
     }
-
   //calculate fitness
   calculate_fitness(sol);
+  //test tournment selection
+  tournment_selection(sol);
   //sort
   bubble_sort(sol);
   // print candidates
