@@ -8,13 +8,9 @@
 class AlphabetValues
 {
 private:
-  int values[ALPHABET_LETTERS];
+  int * values;
 public:
-  AlphabetValues()
-  {
-    for(int i = 0; i < ALPHABET_LETTERS; i++) values[i] = 0;
-  }
-  
+  AlphabetValues();
   int getValueForLetter(char letter);
   void setValueForLetter(char letter, int value);
   void printTheShitOut();

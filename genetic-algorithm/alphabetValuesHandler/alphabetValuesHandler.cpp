@@ -1,13 +1,21 @@
 #include "alphabetValuesHandler.hpp"
 
+AlphabetValues::AlphabetValues()
+{
+  values = new int[ALPHABET_LETTERS];
+  for(int i = 0; i < ALPHABET_LETTERS; i++) values[i] = 0;
+}
+
 int AlphabetValues::getValueForLetter(char letter)
 {
-  return this->values[letter-65];
+  int position = letter-65;
+  return this->values[position];
 }
 
 void AlphabetValues::setValueForLetter(char letter, int value)
 {
-  this->values[letter-65] = value;
+  int position = (int)letter-65;
+  this->values[position] = value;
 }
 
 void AlphabetValues::printTheShitOut()
