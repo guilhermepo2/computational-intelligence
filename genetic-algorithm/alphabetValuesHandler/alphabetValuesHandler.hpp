@@ -12,6 +12,7 @@ private:
 public:
   AlphabetValues();
   int getValueForLetter(char letter);
+  char getLetterFromValue(int value);
   void setValueForLetter(char letter, int value);
   void printTheShitOut();
 };
