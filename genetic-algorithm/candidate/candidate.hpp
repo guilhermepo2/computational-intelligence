@@ -3,6 +3,7 @@
 #include <iostream>
 #include <stdio.h>
 #include "../alphabetValuesHandler/alphabetValuesHandler.hpp"
+#include "../common/config.hpp"
 
 class Candidate
 {
@@ -25,6 +26,12 @@ public:
   void calcFitness();
   void printCandidate();
   int getSize();
+  void printLettersAndValues();
+
+  // methods to help the population class
+  int getValue(int pos);
+  int getPositionForValue(int value);
+  void setValueForPosition(int position, int value);
 };
 
 #endif

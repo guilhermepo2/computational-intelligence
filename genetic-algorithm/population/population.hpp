@@ -35,8 +35,12 @@ public:
   void printAllFitness();
   void calculatePopulationFitness();
   void bubbleSort();
-  void printBestFitness();
+  void printBestCandidate();
   void printEverything();
+  void insertCandidate(Candidate candidate);
+  
+  int tournamentSelection();
+  void crossover(Population * children);
 };
 
 #endif
