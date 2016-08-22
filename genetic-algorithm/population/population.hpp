@@ -38,9 +38,11 @@ public:
   void printBestCandidate();
   void printEverything();
   void insertCandidate(Candidate candidate);
-  
+  int getSize();
   int tournamentSelection();
   void crossover(Population * children);
+  void mutateOneRandom();
+  void elitism(Population * children);
 };
 
 #endif

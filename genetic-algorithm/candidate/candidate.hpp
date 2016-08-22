@@ -21,17 +21,23 @@ private:
 public:
   Candidate(int valuesSize, std::string op1,
 	    std::string op2, std::string result);
-  void createRandomCandidate();    // TO DO
+  void createRandomCandidate();
   int getFitness();
   void calcFitness();
   void printCandidate();
   int getSize();
   void printLettersAndValues();
+  std::string getWord1();
+  std::string getWord2();
+  std::string getResultWord();
 
   // methods to help the population class
   int getValue(int pos);
   int getPositionForValue(int value);
   void setValueForPosition(int position, int value);
+
+  // for mutation
+  void mutate();
 };
 
 #endif

@@ -7,20 +7,22 @@ int main()
   
   Population pop("SEND", "MORE", "MONEY", 100, 1, 10, 0.6, 0.01);
   Population children("SEND", "MORE", "MONEY", 60, 1, 10, 0.0, 0.01);
-  pop.createPopulation();
-  pop.calculatePopulationFitness();
-
-  // crossover (tournament selection)
-  // mutation
-  
+  pop.createPopulation();               // OK
+  pop.calculatePopulationFitness();     // OK
   pop.bubbleSort();
   pop.printAllFitness();
-
-  pop.crossover(&children);
+  
+  for(int i = 0; i < (children.getSize() / 2); i++)
+    {
+      pop.crossover(&children);         // OK
+    }
+  children.mutateOneRandom();           // OK
+  pop.elitism(&children);               // OK
+  pop.printAllFitness();                
 
   std::cout << "\nBest Candidate: " << std::endl;
   pop.printBestCandidate();
 
-  std::cout << "\nok!" << std::endl;
+  std::cout << "One iteration done!" << std::endl;
   return 0;
 }

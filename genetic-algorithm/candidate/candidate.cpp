@@ -90,8 +90,8 @@ void Candidate::calcFitness()
 		pow(10,(this->result.size() - (i+1))));
     }
 
-  //this->fitness = (100000 - labs(word1+word2 - result));
-  this->fitness = labs(word1+2 - result);
+  this->fitness = (100000 - labs(word1+word2 - result));
+  //this->fitness = labs(word1 + word2 - result);
 }
 
 void Candidate::printCandidate()
@@ -166,3 +166,78 @@ int Candidate::getSize()
   return this->size;
 }
 
+
+int Candidate::getValue(int pos)
+{
+  return this->values->getValueForLetter(this->letters[pos]);
+}
+
+int Candidate::getPositionForValue(int value)
+{
+  // search which letter has the value
+  char letter = this->values->getLetterFromValue(value);
+  
+  #if DEBUG
+  std::cout << "Value: " << value << " Letter: " << letter << std::endl;
+  #endif
+
+  // I HAVE THE LETTER
+  
+  // return the letter position on the LETTERS vector
+
+  for(int i = 0; i < this->letters.size(); i++)
+    {
+      if(this->letters[i] == letter)
+	{
+	  return i;
+	}
+    }
+
+  return 0;
+}
+
+void Candidate::printLettersAndValues()
+{
+  for(int i = 0; i < this->letters.size(); i++)
+    {
+      std::cout << this->letters[i] << " ";
+    }
+  std::cout << std::endl;
+  
+  for(int i = 0; i < this->letters.size(); i++)
+    {
+      std::cout << this->values->getValueForLetter(this->letters[i]) << " ";
+    }
+  std::cout << "\n\n";
+}
+
+void Candidate::setValueForPosition(int position, int value)
+{
+  char letter = this->letters[position];
+  this->values->setValueForLetter(letter, value);
+}
+
+std::string Candidate::getWord1()
+{
+  return this->op1;
+}
+
+std::string Candidate::getWord2()
+{
+  return this->op2;
+}
+
+std::string Candidate::getResultWord()
+{
+  return this->result;
+}
+
+void Candidate::mutate()
+{
+  int pos1 = rand() % this->letters.size();
+  int pos2 = rand() % this->letters.size();
+  int valueP1 = this->values->getValueForLetter(this->letters[pos1]);
+  int valueP2 = this->values->getValueForLetter(this->letters[pos2]);
+  this->values->setValueForLetter(this->letters[pos1], valueP2);
+  this->values->setValueForLetter(this->letters[pos2], valueP1);
+}
