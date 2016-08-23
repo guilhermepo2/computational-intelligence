@@ -4,20 +4,14 @@ Population::Population(std::string op1,
 		       std::string op2,
 		       std::string result,
 		       int populationSize,
-		       int generations,
-		       int problemSize,
-		       float crossoverRate,
-		       float mutationRate)
+		       int problemSize)
 {
   this->op1 = op1;
   this->op2 = op2;
   this->result = result;
  
   this->populationSize = populationSize;
-  this->generations = generations;
   this->problemSize = problemSize;
-  this->crossoverRate = crossoverRate;
-  this->mutationRate = mutationRate;
   this->inicialized = false;
 }
 
@@ -48,8 +42,7 @@ void Population::calculatePopulationFitness()
 
 void Population::bubbleSort()
 {
-  Candidate c(10, "SEND", "MORE", "MONEY");
-  
+  Candidate c(this->problemSize, this->op1, this->op2, this->result);
   for(int i = 0; i < this->candidates.size(); i++)
     {
       for(int j = 0; j < this->candidates.size(); j++)

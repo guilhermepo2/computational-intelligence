@@ -1,7 +1,6 @@
 #ifndef POPULATION_HEADER
 #define POPULATION_HEADER
 #include "../candidate/candidate.hpp"
-#include <vector>
 
 class Population
 {
@@ -13,10 +12,10 @@ private:
   
   // population data (get by command line)
   int populationSize;
-  int generations;
+  //int generations;
   int problemSize;
-  float crossoverRate;
-  float mutationRate;
+  //float crossoverRate;
+  //float mutationRate;
 
   // internal data
   bool inicialized;
@@ -27,10 +26,7 @@ public:
 	     std::string op2,
 	     std::string result,
 	     int populationSize,
-	     int generations,
-	     int problemSize,
-	     float crossoverRate,
-	     float mutationRate);
+	     int problemSize);
   void createPopulation();
   void printAllFitness();
   void calculatePopulationFitness();

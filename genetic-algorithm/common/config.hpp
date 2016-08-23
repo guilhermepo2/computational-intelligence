@@ -4,3 +4,11 @@
 #define DEBUG 0
 
 #endif
+
+#ifndef COMMON_INCLUDES
+#define COMMON_INCLUDES
+
+#include <vector>
+#include <math.h>
+
+#endif

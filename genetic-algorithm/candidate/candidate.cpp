@@ -1,5 +1,4 @@
 #include "candidate.hpp"
-#include <math.h>
 
 Candidate::Candidate(int valuesSize, std::string op1,
 		     std::string op2, std::string result)
