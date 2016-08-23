@@ -18,7 +18,22 @@ int main()
     }
   children.mutateOneRandom();           // OK
   pop.elitism(&children);               // OK
-  pop.printAllFitness();                
+  pop.printAllFitness();
+
+  // TO DO
+  // get statistics
+
+  // generation 0 and generation 1
+  // best candidate
+  // candidates with 100.000 - fitness < 100
+  // fitness mean
+  // fitness mean (candidates < 100)
+  // candidates with m = 0 or m = 1
+  // final population
+  // measure time of one generation
+
+  // do it 50 times
+  
 
   std::cout << "\nBest Candidate: " << std::endl;
   pop.printBestCandidate();
