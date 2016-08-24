@@ -3,7 +3,7 @@
 
 #define DEBUG 0
 #define SAVE 1
-#define SAVE_URL "results/test03.dat"
+#define SAVE_URL "results/test04.dat"
 
 #endif
 
