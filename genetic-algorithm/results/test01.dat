@@ -1,0 +1,1138 @@
+=================================
+NEW TEST
+
+GENERATION 0
+BEST CANDIDATE:
+Fitness: 98431
+S E N D M O R Y B F 
+1 8 7 2 0 3 4 9 5 6 
+Candidates with fitness < 100: 0
+Populations' mean fitnes: 61074
+
+AFTER 1 GENERATIONS:
+BEST CANDIDATE:
+Fitness: 99568
+S E N D M O R Y B C 
+2 9 7 4 0 3 8 5 6 1 
+Candidates with fitness < 100: 0
+Populations' mean fitnes: 85234
+
+TEST ENDED
+=================================
+
+=================================
+NEW TEST
+
+GENERATION 0
+BEST CANDIDATE:
+Fitness: 99474
+S E N D M O R Y I W 
+4 2 3 9 0 5 6 7 8 1 
+Candidates with fitness < 100: 0
+Populations' mean fitnes: 62441
+
+AFTER 1 GENERATIONS:
+BEST CANDIDATE:
+Fitness: 99889
+S E N D M O R Y G K 
+6 8 4 2 0 7 5 9 3 1 
+Candidates with fitness < 100: 0
+Populations' mean fitnes: 88415
+
+TEST ENDED
+=================================
+
+=================================
+NEW TEST
+
+GENERATION 0
+BEST CANDIDATE:
+Fitness: 99160
+S E N D M O R Y X H 
+5 3 8 4 0 6 1 7 9 2 
+Candidates with fitness < 100: 0
+Populations' mean fitnes: 57182
+
+AFTER 1 GENERATIONS:
+BEST CANDIDATE:
+Fitness: 99160
+S E N D M O R Y X H 
+5 3 8 4 0 6 1 7 9 2 
+Candidates with fitness < 100: 0
+Populations' mean fitnes: 81652
+
+TEST ENDED
+=================================
+
+=================================
+NEW TEST
+
+GENERATION 0
+BEST CANDIDATE:
+Fitness: 98910
+S E N D M O R Y P W 
+1 4 8 5 0 2 7 9 6 3 
+Candidates with fitness < 100: 0
+Populations' mean fitnes: 61644
+
+AFTER 1 GENERATIONS:
+BEST CANDIDATE:
+Fitness: 99727
+S E N D M O R Y J W 
+7 5 6 1 0 8 2 9 4 3 
+Candidates with fitness < 100: 0
+Populations' mean fitnes: 86072
+
+TEST ENDED
+=================================
+
+=================================
+NEW TEST
+
+GENERATION 0
+BEST CANDIDATE:
+Fitness: 99613
+S E N D M O R Y T C 
+8 2 6 4 0 9 7 3 1 5 
+Candidates with fitness < 100: 0
+Populations' mean fitnes: 58662
+
+AFTER 1 GENERATIONS:
+BEST CANDIDATE:
+Fitness: 99820
+S E N D M O R Y I B 
+7 5 1 4 0 8 2 9 6 3 
+Candidates with fitness < 100: 0
+Populations' mean fitnes: 86082
+
+TEST ENDED
+=================================
+
+=================================
+NEW TEST
+
+GENERATION 0
+BEST CANDIDATE:
+Fitness: 99524
+S E N D M O R Y U I 
+2 7 5 6 0 3 4 9 1 8 
+Candidates with fitness < 100: 0
+Populations' mean fitnes: 55210
+
+AFTER 1 GENERATIONS:
+BEST CANDIDATE:
+Fitness: 99524
+S E N D M O R Y U I 
+2 7 5 6 0 3 4 9 1 8 
+Candidates with fitness < 100: 0
+Populations' mean fitnes: 83312
+
+TEST ENDED
+=================================
+
+=================================
+NEW TEST
+
+GENERATION 0
+BEST CANDIDATE:
+Fitness: 99595
+S E N D M O R Y K C 
+3 9 7 2 0 4 1 6 5 8 
+Candidates with fitness < 100: 0
+Populations' mean fitnes: 60108
+
+AFTER 1 GENERATIONS:
+BEST CANDIDATE:
+Fitness: 99673
+S E N D M O R Y T Q 
+5 8 1 3 0 6 9 4 2 7 
+Candidates with fitness < 100: 0
+Populations' mean fitnes: 85740
+
+TEST ENDED
+=================================
+
+=================================
+NEW TEST
+
+GENERATION 0
+BEST CANDIDATE:
+Fitness: 99981
+S E N D M O R Y X F 
+9 5 6 4 1 0 7 8 2 3 
+Candidates with fitness < 100: 1
+Mean fitness of candidates with fitness < 100: 99981
+Populations' mean fitnes: 61283
+
+AFTER 1 GENERATIONS:
+BEST CANDIDATE:
+Fitness: 99981
+S E N D M O R Y X F 
+9 5 6 4 1 0 7 8 2 3 
+Candidates with fitness < 100: 2
+Mean fitness of candidates with fitness < 100: 99947
+Populations' mean fitnes: 85308
+
+TEST ENDED
+=================================
+
+=================================
+NEW TEST
+
+GENERATION 0
+BEST CANDIDATE:
+Fitness: 99760
+S E N D M O R Y C W 
+7 1 2 3 0 8 5 4 9 6 
+Candidates with fitness < 100: 0
+Populations' mean fitnes: 61262
+
+AFTER 1 GENERATIONS:
+BEST CANDIDATE:
+Fitness: 99760
+S E N D M O R Y C W 
+7 1 2 3 0 8 5 4 9 6 
+Candidates with fitness < 100: 0
+Populations' mean fitnes: 87525
+
+TEST ENDED
+=================================
+
+=================================
+NEW TEST
+
+GENERATION 0
+BEST CANDIDATE:
+Fitness: 99441
+S E N D M O R Y T W 
+3 1 9 4 0 2 8 6 7 5 
+Candidates with fitness < 100: 0
+Populations' mean fitnes: 57394
+
+AFTER 1 GENERATIONS:
+BEST CANDIDATE:
+Fitness: 99697
+S E N D M O R Y I K 
+8 4 7 5 0 9 6 2 3 1 
+Candidates with fitness < 100: 0
+Populations' mean fitnes: 82704
+
+TEST ENDED
+=================================
+
+=================================
+NEW TEST
+
+GENERATION 0
+BEST CANDIDATE:
+Fitness: 99841
+S E N D M O R Y I P 
+6 9 8 5 0 7 4 3 2 1 
+Candidates with fitness < 100: 0
+Populations' mean fitnes: 61609
+
+AFTER 1 GENERATIONS:
+BEST CANDIDATE:
+Fitness: 99841
+S E N D M O R Y G H 
+6 9 8 5 0 7 4 3 2 1 
+Candidates with fitness < 100: 0
+Populations' mean fitnes: 86319
+
+TEST ENDED
+=================================
+
+=================================
+NEW TEST
+
+GENERATION 0
+BEST CANDIDATE:
+Fitness: 99395
+S E N D M O R Y Q K 
+6 9 3 7 0 8 4 1 5 2 
+Candidates with fitness < 100: 0
+Populations' mean fitnes: 59733
+
+AFTER 1 GENERATIONS:
+BEST CANDIDATE:
+Fitness: 99410
+S E N D M O R Y P Q 
+2 9 8 6 0 3 1 5 4 7 
+Candidates with fitness < 100: 0
+Populations' mean fitnes: 86257
+
+TEST ENDED
+=================================
+
+=================================
+NEW TEST
+
+GENERATION 0
+BEST CANDIDATE:
+Fitness: 99718
+S E N D M O R Y V B 
+7 5 6 2 0 8 1 9 4 3 
+Candidates with fitness < 100: 0
+Populations' mean fitnes: 56915
+
+AFTER 1 GENERATIONS:
+BEST CANDIDATE:
+Fitness: 99954
+S E N D M O R Y X V 
+8 3 2 7 0 9 5 4 6 1 
+Candidates with fitness < 100: 1
+Mean fitness of candidates with fitness < 100: 99954
+Populations' mean fitnes: 84709
+
+TEST ENDED
+=================================
+
+=================================
+NEW TEST
+
+GENERATION 0
+BEST CANDIDATE:
+Fitness: 99838
+S E N D M O R Y F B 
+5 8 2 7 0 6 1 3 9 4 
+Candidates with fitness < 100: 0
+Populations' mean fitnes: 57432
+
+AFTER 1 GENERATIONS:
+BEST CANDIDATE:
+Fitness: 99838
+S E N D M O R Y F B 
+5 8 2 7 0 6 1 3 9 4 
+Candidates with fitness < 100: 0
+Populations' mean fitnes: 81834
+
+TEST ENDED
+=================================
+
+=================================
+NEW TEST
+
+GENERATION 0
+BEST CANDIDATE:
+Fitness: 99505
+S E N D M O R Y C L 
+8 2 7 4 0 9 5 1 6 3 
+Candidates with fitness < 100: 0
+Populations' mean fitnes: 58809
+
+AFTER 1 GENERATIONS:
+BEST CANDIDATE:
+Fitness: 99505
+S E N D M O R Y C L 
+8 2 7 4 0 9 5 1 6 3 
+Candidates with fitness < 100: 0
+Populations' mean fitnes: 84839
+
+TEST ENDED
+=================================
+
+=================================
+NEW TEST
+
+GENERATION 0
+BEST CANDIDATE:
+Fitness: 99686
+S E N D M O R Y T G 
+9 2 6 7 1 0 4 3 8 5 
+Candidates with fitness < 100: 0
+Populations' mean fitnes: 56390
+
+AFTER 1 GENERATIONS:
+BEST CANDIDATE:
+Fitness: 99732
+S E N D M O R Y F B 
+2 9 5 4 0 3 6 1 7 8 
+Candidates with fitness < 100: 0
+Populations' mean fitnes: 81620
+
+TEST ENDED
+=================================
+
+=================================
+NEW TEST
+
+GENERATION 0
+BEST CANDIDATE:
+Fitness: 99016
+S E N D M O R Y K L 
+4 2 8 3 0 5 6 9 7 1 
+Candidates with fitness < 100: 0
+Populations' mean fitnes: 55719
+
+AFTER 1 GENERATIONS:
+BEST CANDIDATE:
+Fitness: 99549
+S E N D M O R Y J B 
+6 9 1 5 0 7 2 3 8 4 
+Candidates with fitness < 100: 0
+Populations' mean fitnes: 80372
+
+TEST ENDED
+=================================
+
+=================================
+NEW TEST
+
+GENERATION 0
+BEST CANDIDATE:
+Fitness: 99110
+S E N D M O R Y X L 
+2 6 9 1 0 3 8 7 5 4 
+Candidates with fitness < 100: 0
+Populations' mean fitnes: 58377
+
+AFTER 1 GENERATIONS:
+BEST CANDIDATE:
+Fitness: 99292
+S E N D M O R Y Z T 
+2 6 7 1 0 3 8 5 9 4 
+Candidates with fitness < 100: 0
+Populations' mean fitnes: 83418
+
+TEST ENDED
+=================================
+
+=================================
+NEW TEST
+
+GENERATION 0
+BEST CANDIDATE:
+Fitness: 98846
+S E N D M O R Y B W 
+8 3 5 7 1 0 2 4 9 6 
+Candidates with fitness < 100: 0
+Populations' mean fitnes: 59041
+
+AFTER 1 GENERATIONS:
+BEST CANDIDATE:
+Fitness: 99640
+S E N D M O R Y Z C 
+2 8 5 9 0 3 6 7 1 4 
+Candidates with fitness < 100: 0
+Populations' mean fitnes: 83849
+
+TEST ENDED
+=================================
+
+=================================
+NEW TEST
+
+GENERATION 0
+BEST CANDIDATE:
+Fitness: 99861
+S E N D M O R Y L K 
+8 5 3 1 0 9 6 7 2 4 
+Candidates with fitness < 100: 0
+Populations' mean fitnes: 58014
+
+AFTER 1 GENERATIONS:
+BEST CANDIDATE:
+Fitness: 99861
+S E N D M O R Y G V 
+8 5 3 1 0 9 6 7 2 4 
+Candidates with fitness < 100: 0
+Populations' mean fitnes: 81810
+
+TEST ENDED
+=================================
+
+=================================
+NEW TEST
+
+GENERATION 0
+BEST CANDIDATE:
+Fitness: 99534
+S E N D M O R Y B F 
+6 9 1 5 0 7 4 8 3 2 
+Candidates with fitness < 100: 0
+Populations' mean fitnes: 58201
+
+AFTER 1 GENERATIONS:
+BEST CANDIDATE:
+Fitness: 99560
+S E N D M O R Y A T 
+6 9 1 5 0 8 3 4 7 2 
+Candidates with fitness < 100: 0
+Populations' mean fitnes: 81676
+
+TEST ENDED
+=================================
+
+=================================
+NEW TEST
+
+GENERATION 0
+BEST CANDIDATE:
+Fitness: 99988
+S E N D M O R Y G L 
+7 5 4 6 0 8 9 3 2 1 
+Candidates with fitness < 100: 1
+Mean fitness of candidates with fitness < 100: 99988
+Populations' mean fitnes: 55412
+
+AFTER 1 GENERATIONS:
+BEST CANDIDATE:
+Fitness: 99988
+S E N D M O R Y I U 
+7 5 4 6 0 8 9 3 2 1 
+Candidates with fitness < 100: 2
+Mean fitness of candidates with fitness < 100: 99988
+Populations' mean fitnes: 82618
+
+TEST ENDED
+=================================
+
+=================================
+NEW TEST
+
+GENERATION 0
+BEST CANDIDATE:
+Fitness: 99852
+S E N D M O R Y W T 
+9 7 6 4 1 0 5 3 2 8 
+Candidates with fitness < 100: 0
+Populations' mean fitnes: 61742
+
+AFTER 1 GENERATIONS:
+BEST CANDIDATE:
+Fitness: 99852
+S E N D M O R Y W T 
+9 7 6 4 1 0 5 3 2 8 
+Candidates with fitness < 100: 0
+Populations' mean fitnes: 87792
+
+TEST ENDED
+=================================
+
+=================================
+NEW TEST
+
+GENERATION 0
+BEST CANDIDATE:
+Fitness: 99038
+S E N D M O R Y U W 
+6 1 8 3 0 5 9 2 7 4 
+Candidates with fitness < 100: 0
+Populations' mean fitnes: 61313
+
+AFTER 1 GENERATIONS:
+BEST CANDIDATE:
+Fitness: 99038
+S E N D M O R Y G Q 
+6 1 8 3 0 5 9 2 7 4 
+Candidates with fitness < 100: 0
+Populations' mean fitnes: 86746
+
+TEST ENDED
+=================================
+
+=================================
+NEW TEST
+
+GENERATION 0
+BEST CANDIDATE:
+Fitness: 99846
+S E N D M O R Y Q T 
+5 8 2 3 0 6 1 7 9 4 
+Candidates with fitness < 100: 0
+Populations' mean fitnes: 58072
+
+AFTER 1 GENERATIONS:
+BEST CANDIDATE:
+Fitness: 99846
+S E N D M O R Y Q W 
+5 8 2 3 0 6 1 7 9 4 
+Candidates with fitness < 100: 0
+Populations' mean fitnes: 85366
+
+TEST ENDED
+=================================
+
+=================================
+NEW TEST
+
+GENERATION 0
+BEST CANDIDATE:
+Fitness: 98821
+S E N D M O R Y W L 
+1 4 9 5 0 2 7 8 6 3 
+Candidates with fitness < 100: 0
+Populations' mean fitnes: 60832
+
+AFTER 1 GENERATIONS:
+BEST CANDIDATE:
+Fitness: 98827
+S E N D M O R Y K W 
+1 4 9 8 0 2 7 5 6 3 
+Candidates with fitness < 100: 0
+Populations' mean fitnes: 84872
+
+TEST ENDED
+=================================
+
+=================================
+NEW TEST
+
+GENERATION 0
+BEST CANDIDATE:
+Fitness: 99975
+S E N D M O R Y K F 
+4 8 3 9 0 5 6 2 7 1 
+Candidates with fitness < 100: 2
+Mean fitness of candidates with fitness < 100: 99958
+Populations' mean fitnes: 59464
+
+AFTER 1 GENERATIONS:
+BEST CANDIDATE:
+Fitness: 99975
+S E N D M O R Y K F 
+4 8 3 9 0 5 6 2 7 1 
+Candidates with fitness < 100: 2
+Mean fitness of candidates with fitness < 100: 99958
+Populations' mean fitnes: 81720
+
+TEST ENDED
+=================================
+
+=================================
+NEW TEST
+
+GENERATION 0
+BEST CANDIDATE:
+Fitness: 98507
+S E N D M O R Y B X 
+2 8 7 5 0 4 1 6 3 9 
+Candidates with fitness < 100: 0
+Populations' mean fitnes: 58524
+
+AFTER 1 GENERATIONS:
+BEST CANDIDATE:
+Fitness: 99227
+S E N D M O R Y V C 
+7 4 1 6 0 9 5 3 2 8 
+Candidates with fitness < 100: 0
+Populations' mean fitnes: 80170
+
+TEST ENDED
+=================================
+
+=================================
+NEW TEST
+
+GENERATION 0
+BEST CANDIDATE:
+Fitness: 99808
+S E N D M O R Y L Q 
+6 9 8 2 0 7 1 3 4 5 
+Candidates with fitness < 100: 0
+Populations' mean fitnes: 62030
+
+AFTER 1 GENERATIONS:
+BEST CANDIDATE:
+Fitness: 99808
+S E N D M O R Y L Q 
+6 9 8 2 0 7 1 3 4 5 
+Candidates with fitness < 100: 0
+Populations' mean fitnes: 88609
+
+TEST ENDED
+=================================
+
+=================================
+NEW TEST
+
+GENERATION 0
+BEST CANDIDATE:
+Fitness: 98782
+S E N D M O R Y Z I 
+4 6 8 7 0 3 9 5 2 1 
+Candidates with fitness < 100: 0
+Populations' mean fitnes: 58306
+
+AFTER 1 GENERATIONS:
+BEST CANDIDATE:
+Fitness: 99434
+S E N D M O R Y P C 
+8 9 5 7 1 0 6 2 3 4 
+Candidates with fitness < 100: 0
+Populations' mean fitnes: 84366
+
+TEST ENDED
+=================================
+
+=================================
+NEW TEST
+
+GENERATION 0
+BEST CANDIDATE:
+Fitness: 98781
+S E N D M O R Y Q C 
+4 6 7 2 0 3 1 9 8 5 
+Candidates with fitness < 100: 0
+Populations' mean fitnes: 62043
+
+AFTER 1 GENERATIONS:
+BEST CANDIDATE:
+Fitness: 99565
+S E N D M O R Y Q L 
+7 2 5 4 0 8 3 1 6 9 
+Candidates with fitness < 100: 0
+Populations' mean fitnes: 85270
+
+TEST ENDED
+=================================
+
+=================================
+NEW TEST
+
+GENERATION 0
+BEST CANDIDATE:
+Fitness: 99356
+S E N D M O R Y Q A 
+4 9 1 5 0 6 3 8 7 2 
+Candidates with fitness < 100: 0
+Populations' mean fitnes: 62937
+
+AFTER 1 GENERATIONS:
+BEST CANDIDATE:
+Fitness: 99506
+S E N D M O R Y F P 
+1 8 5 4 0 2 3 6 7 9 
+Candidates with fitness < 100: 0
+Populations' mean fitnes: 87048
+
+TEST ENDED
+=================================
+
+=================================
+NEW TEST
+
+GENERATION 0
+BEST CANDIDATE:
+Fitness: 99312
+S E N D M O R Y U W 
+2 5 6 8 0 3 9 1 4 7 
+Candidates with fitness < 100: 0
+Populations' mean fitnes: 60247
+
+AFTER 1 GENERATIONS:
+BEST CANDIDATE:
+Fitness: 99643
+S E N D M O R Y Z P 
+3 9 7 6 0 4 5 2 1 8 
+Candidates with fitness < 100: 0
+Populations' mean fitnes: 85291
+
+TEST ENDED
+=================================
+
+=================================
+NEW TEST
+
+GENERATION 0
+BEST CANDIDATE:
+Fitness: 99818
+S E N D M O R Y J T 
+5 8 2 3 0 6 4 9 1 7 
+Candidates with fitness < 100: 0
+Populations' mean fitnes: 61593
+
+AFTER 1 GENERATIONS:
+BEST CANDIDATE:
+Fitness: 99818
+S E N D M O R Y J T 
+5 8 2 3 0 6 4 9 1 7 
+Candidates with fitness < 100: 0
+Populations' mean fitnes: 84297
+
+TEST ENDED
+=================================
+
+=================================
+NEW TEST
+
+GENERATION 0
+BEST CANDIDATE:
+Fitness: 99085
+S E N D M O R Y X U 
+7 1 9 8 0 6 3 4 5 2 
+Candidates with fitness < 100: 0
+Populations' mean fitnes: 56060
+
+AFTER 1 GENERATIONS:
+BEST CANDIDATE:
+Fitness: 99698
+S E N D M O R Y P T 
+8 9 2 4 1 0 6 5 7 3 
+Candidates with fitness < 100: 0
+Populations' mean fitnes: 80263
+
+TEST ENDED
+=================================
+
+=================================
+NEW TEST
+
+GENERATION 0
+BEST CANDIDATE:
+Fitness: 99410
+S E N D M O R Y V Z 
+7 6 1 8 0 9 5 4 2 3 
+Candidates with fitness < 100: 0
+Populations' mean fitnes: 58542
+
+AFTER 1 GENERATIONS:
+BEST CANDIDATE:
+Fitness: 99891
+S E N D M O R Y B G 
+9 3 5 4 1 0 7 6 2 8 
+Candidates with fitness < 100: 0
+Populations' mean fitnes: 82068
+
+TEST ENDED
+=================================
+
+=================================
+NEW TEST
+
+GENERATION 0
+BEST CANDIDATE:
+Fitness: 99959
+S E N D M O R Y X T 
+3 8 2 7 0 4 1 6 9 5 
+Candidates with fitness < 100: 1
+Mean fitness of candidates with fitness < 100: 99959
+Populations' mean fitnes: 60228
+
+AFTER 1 GENERATIONS:
+BEST CANDIDATE:
+Fitness: 99959
+S E N D M O R Y X T 
+3 8 2 7 0 4 1 6 9 5 
+Candidates with fitness < 100: 2
+Mean fitness of candidates with fitness < 100: 99959
+Populations' mean fitnes: 84893
+
+TEST ENDED
+=================================
+
+=================================
+NEW TEST
+
+GENERATION 0
+BEST CANDIDATE:
+Fitness: 99673
+S E N D M O R Y Z C 
+4 9 8 6 0 5 7 2 3 1 
+Candidates with fitness < 100: 0
+Populations' mean fitnes: 59271
+
+AFTER 1 GENERATIONS:
+BEST CANDIDATE:
+Fitness: 99673
+S E N D M O R Y X W 
+4 9 8 6 0 5 7 2 3 1 
+Candidates with fitness < 100: 0
+Populations' mean fitnes: 82521
+
+TEST ENDED
+=================================
+
+=================================
+NEW TEST
+
+GENERATION 0
+BEST CANDIDATE:
+Fitness: 99858
+S E N D M O R Y I P 
+9 3 2 7 1 0 5 8 6 4 
+Candidates with fitness < 100: 0
+Populations' mean fitnes: 60678
+
+AFTER 1 GENERATIONS:
+BEST CANDIDATE:
+Fitness: 99900
+S E N D M O R Y V X 
+6 9 5 2 0 7 3 1 8 4 
+Candidates with fitness < 100: 0
+Populations' mean fitnes: 85450
+
+TEST ENDED
+=================================
+
+=================================
+NEW TEST
+
+GENERATION 0
+BEST CANDIDATE:
+Fitness: 99366
+S E N D M O R Y A T 
+3 1 8 7 0 2 6 4 9 5 
+Candidates with fitness < 100: 0
+Populations' mean fitnes: 63673
+
+AFTER 1 GENERATIONS:
+BEST CANDIDATE:
+Fitness: 99717
+S E N D M O R Y V J 
+8 5 1 4 0 9 2 6 3 7 
+Candidates with fitness < 100: 0
+Populations' mean fitnes: 89935
+
+TEST ENDED
+=================================
+
+=================================
+NEW TEST
+
+GENERATION 0
+BEST CANDIDATE:
+Fitness: 99940
+S E N D M O R Y A B 
+5 8 4 3 0 6 9 1 2 7 
+Candidates with fitness < 100: 2
+Mean fitness of candidates with fitness < 100: 99932
+Populations' mean fitnes: 58647
+
+AFTER 1 GENERATIONS:
+BEST CANDIDATE:
+Fitness: 99940
+S E N D M O R Y A B 
+5 8 4 3 0 6 9 1 2 7 
+Candidates with fitness < 100: 3
+Mean fitness of candidates with fitness < 100: 99930
+Populations' mean fitnes: 86396
+
+TEST ENDED
+=================================
+
+=================================
+NEW TEST
+
+GENERATION 0
+BEST CANDIDATE:
+Fitness: 98676
+S E N D M O R Y X A 
+2 8 6 5 0 4 9 7 3 1 
+Candidates with fitness < 100: 0
+Populations' mean fitnes: 58139
+
+AFTER 1 GENERATIONS:
+BEST CANDIDATE:
+Fitness: 99985
+S E N D M O R Y F H 
+7 4 3 2 0 8 9 1 5 6 
+Candidates with fitness < 100: 1
+Mean fitness of candidates with fitness < 100: 99985
+Populations' mean fitnes: 81777
+
+TEST ENDED
+=================================
+
+=================================
+NEW TEST
+
+GENERATION 0
+BEST CANDIDATE:
+Fitness: 99947
+S E N D M O R Y F V 
+7 4 3 9 0 8 5 6 2 1 
+Candidates with fitness < 100: 1
+Mean fitness of candidates with fitness < 100: 99947
+Populations' mean fitnes: 56174
+
+AFTER 1 GENERATIONS:
+BEST CANDIDATE:
+Fitness: 99947
+S E N D M O R Y F V 
+7 4 3 9 0 8 5 6 2 1 
+Candidates with fitness < 100: 2
+Mean fitness of candidates with fitness < 100: 99947
+Populations' mean fitnes: 82116
+
+TEST ENDED
+=================================
+
+=================================
+NEW TEST
+
+GENERATION 0
+BEST CANDIDATE:
+Fitness: 99784
+S E N D M O R Y C X 
+3 5 1 6 0 4 2 7 9 8 
+Candidates with fitness < 100: 0
+Populations' mean fitnes: 59869
+
+AFTER 1 GENERATIONS:
+BEST CANDIDATE:
+Fitness: 99784
+S E N D M O R Y C X 
+3 5 1 6 0 4 2 7 9 8 
+Candidates with fitness < 100: 0
+Populations' mean fitnes: 81636
+
+TEST ENDED
+=================================
+
+=================================
+NEW TEST
+
+GENERATION 0
+BEST CANDIDATE:
+Fitness: 98974
+S E N D M O R Y W A 
+4 3 9 8 0 5 1 7 2 6 
+Candidates with fitness < 100: 0
+Populations' mean fitnes: 53520
+
+AFTER 1 GENERATIONS:
+BEST CANDIDATE:
+Fitness: 98974
+S E N D M O R Y W A 
+4 3 9 8 0 5 1 7 2 6 
+Candidates with fitness < 100: 0
+Populations' mean fitnes: 80102
+
+TEST ENDED
+=================================
+
+=================================
+NEW TEST
+
+GENERATION 0
+BEST CANDIDATE:
+Fitness: 99506
+S E N D M O R Y H V 
+1 9 6 5 0 2 3 8 7 4 
+Candidates with fitness < 100: 0
+Populations' mean fitnes: 62409
+
+AFTER 1 GENERATIONS:
+BEST CANDIDATE:
+Fitness: 99506
+S E N D M O R Y H V 
+1 9 6 5 0 2 3 8 7 4 
+Candidates with fitness < 100: 0
+Populations' mean fitnes: 86966
+
+TEST ENDED
+=================================
+
+=================================
+NEW TEST
+
+GENERATION 0
+BEST CANDIDATE:
+Fitness: 99909
+S E N D M O R Y P C 
+7 4 3 1 0 8 2 6 5 9 
+Candidates with fitness < 100: 1
+Mean fitness of candidates with fitness < 100: 99909
+Populations' mean fitnes: 58406
+
+AFTER 1 GENERATIONS:
+BEST CANDIDATE:
+Fitness: 99909
+S E N D M O R Y P C 
+7 4 3 1 0 8 2 6 5 9 
+Candidates with fitness < 100: 1
+Mean fitness of candidates with fitness < 100: 99909
+Populations' mean fitnes: 85660
+
+TEST ENDED
+=================================
+
+=================================
+NEW TEST
+
+GENERATION 0
+BEST CANDIDATE:
+Fitness: 99457
+S E N D M O R Y V P 
+3 1 9 7 0 2 6 5 8 4 
+Candidates with fitness < 100: 0
+Populations' mean fitnes: 58646
+
+AFTER 1 GENERATIONS:
+BEST CANDIDATE:
+Fitness: 99457
+S E N D M O R Y V P 
+3 1 9 7 0 2 6 5 8 4 
+Candidates with fitness < 100: 0
+Populations' mean fitnes: 84039
+
+TEST ENDED
+=================================
+
+=================================
+NEW TEST
+
+GENERATION 0
+BEST CANDIDATE:
+Fitness: 99304
+S E N D M O R Y L U 
+4 8 1 5 0 6 7 9 2 3 
+Candidates with fitness < 100: 0
+Populations' mean fitnes: 64170
+
+AFTER 1 GENERATIONS:
+BEST CANDIDATE:
+Fitness: 99304
+S E N D M O R Y L U 
+4 8 1 5 0 6 7 9 2 3 
+Candidates with fitness < 100: 0
+Populations' mean fitnes: 85549
+
+TEST ENDED
+=================================
+
+=================================
+NEW TEST
+
+GENERATION 0
+BEST CANDIDATE:
+Fitness: 99611
+S E N D M O R Y W B 
+9 7 3 6 1 0 2 4 5 8 
+Candidates with fitness < 100: 0
+Populations' mean fitnes: 67042
+
+AFTER 1 GENERATIONS:
+BEST CANDIDATE:
+Fitness: 99851
+S E N D M O R Y H X 
+9 4 3 7 1 0 5 2 6 8 
+Candidates with fitness < 100: 0
+Populations' mean fitnes: 88315
+
+TEST ENDED
+=================================
+
+=================================
+NEW TEST
+
+GENERATION 0
+BEST CANDIDATE:
+Fitness: 99190
+S E N D M O R Y T B 
+2 4 6 5 0 3 7 9 1 8 
+Candidates with fitness < 100: 0
+Populations' mean fitnes: 59532
+
+AFTER 1 GENERATIONS:
+BEST CANDIDATE:
+Fitness: 99890
+S E N D M O R Y W A 
+8 4 2 1 0 9 3 5 6 7 
+Candidates with fitness < 100: 0
+Populations' mean fitnes: 83509
+
+TEST ENDED
+=================================
+

@@ -2,6 +2,8 @@
 #define CONFIG_HEADER
 
 #define DEBUG 0
+#define SAVE 1
+#define SAVE_URL "results/test03.dat"
 
 #endif
 
@@ -10,5 +12,10 @@
 
 #include <vector>
 #include <math.h>
+#include <time.h>
+#include <fstream>
+#include <iostream>
+#include <thread>
+#include <chrono>
 
 #endif

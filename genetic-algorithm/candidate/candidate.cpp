@@ -231,6 +231,11 @@ std::string Candidate::getResultWord()
   return this->result;
 }
 
+std::string Candidate::getLettersWord()
+{
+  return this->letters;
+}
+
 void Candidate::mutate()
 {
   int pos1 = rand() % this->letters.size();

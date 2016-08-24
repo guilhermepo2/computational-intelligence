@@ -86,6 +86,17 @@ void Population::insertCandidate(Candidate candidate)
     this->candidates.push_back(candidate);
 }
 
+void Population::killEveryone()
+{
+#if DEBUG
+  std::cout << "before cleaning Candidates count: " << this->candidates.size() << std::endl;
+#endif
+  this->candidates.clear();
+#if DEBUG
+  std::cout << "after cleaning Candidates count: " << this->candidates.size() << std::endl;
+#endif
+}
+
 int Population::tournamentSelection()
 {
   int first = rand() % this->populationSize;
@@ -260,6 +271,13 @@ void Population::mutateOneRandom()
 
 void Population::elitism(Population * children)
 {
+  #if DEBUG
+  std::cout << "=================================" << std::endl;
+  std::cout << "POPULATION FITNESS BEFORE ELITISM" << std::endl;
+  this->printAllFitness();
+  std::cout << "=================================" << std::endl;
+  #endif
+  
   this->bubbleSort();
   children->bubbleSort();
 
@@ -281,10 +299,68 @@ void Population::elitism(Population * children)
 	  this->bubbleSort();
 	}
     }
+
+#if DEBUG
+  std::cout << "=================================" << std::endl;
+  std::cout << "POPULATION FITNESS AFTER ELITISM" << std::endl;
+  this->printAllFitness();
+  std::cout << "=================================" << std::endl;
+#endif
   
 }
 
 int Population::getSize()
 {
   return this->populationSize;
+}
+
+void Population::saveData(std::string url)
+{
+  std::ofstream file;
+  
+  file.open(SAVE_URL, std::ios::app);
+  //melhor individuo
+  file << "BEST CANDIDATE:\n";
+  file << "Fitness: " << this->candidates[0].getFitness() << "\n";
+  
+  for(int i = 0; i < this->candidates[0].getLettersWord().size(); i++)
+    {
+      file << this->candidates[0].getLettersWord()[i] << " ";
+    }
+  file << "\n";
+  for(int i = 0; i < this->candidates[0].getLettersWord().size(); i++)
+    {
+      file << this->candidates[0].getValue(i) << " ";
+    }
+  file << "\n";
+  
+  //individuos com fitness < 100
+  int _count = 0;
+  int allFitnessSum = 0;
+  int fitnessSum = 0;
+  for(int i = 0; i < this->populationSize; i++)
+    {
+      if(this->candidates[i].getFitness() > 99900)
+	{
+	  _count++;
+	  fitnessSum += this->candidates[i].getFitness();
+	}
+      allFitnessSum += this->candidates[i].getFitness();
+    }
+
+  file << "Candidates with fitness < 100: " << _count << "\n";
+
+  if(_count > 0)
+    file << "Mean fitness of candidates with fitness < 100: " << (float)(fitnessSum/_count) << "\n";
+  
+  file << "Populations' mean fitnes: " << (float)(allFitnessSum/this->populationSize) << "\n";
+
+  
+  file.close();
+}
+
+int Population::getBestFitness()
+{
+  this->bubbleSort();
+  return this->candidates[0].getFitness();
 }

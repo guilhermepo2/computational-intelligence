@@ -30,6 +30,7 @@ public:
   std::string getWord1();
   std::string getWord2();
   std::string getResultWord();
+  std::string getLettersWord();
 
   // methods to help the population class
   int getValue(int pos);
