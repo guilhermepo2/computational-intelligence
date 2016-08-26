@@ -21,7 +21,7 @@ void Population::createPopulation()
   {
     for(int i = 0; i < this->populationSize; i++)
     {
-      candidates.push_back(Candidate(10,this->op1,this->op2,this->result));
+      candidates.push_back(Candidate(this->problemSize,this->op1,this->op2,this->result));
     }
     
     for(int i = 0; i < this->populationSize; i++)
@@ -30,6 +30,8 @@ void Population::createPopulation()
       }
     this->inicialized = true;
   }
+
+  this->calculatePopulationFitness();
 }
 
 void Population::calculatePopulationFitness()
@@ -292,10 +294,8 @@ void Population::elitism(Population * children)
 	    {
 	      this->candidates[this->populationSize - 1].setValueForPosition(j,
 									     children->candidates[i].getValue(j));
-
-	      this->candidates[this->populationSize-1].calcFitness();
 	    }
-
+	  this->candidates[this->populationSize-1].calcFitness();
 	  this->bubbleSort();
 	}
     }

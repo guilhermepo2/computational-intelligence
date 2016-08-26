@@ -36,7 +36,6 @@ void ExecutionHandler::execute()
 
   srand(time(NULL));
   pop.createPopulation();
-  pop.calculatePopulationFitness();
   pop.bubbleSort();
   
 #if SAVE
@@ -57,6 +56,17 @@ void ExecutionHandler::execute()
 	  pop.crossover(&children);
 	}
       children.mutateOneRandom();
+      
+      #if DEBUG
+      std::cout << "=====================" << std::endl;
+      std::cout << "Parent: " << std::endl;
+      pop.printEverything();
+      std::cout << "=====================" << std::endl;
+      std::cout << "Children" << std::endl;
+      children.printEverything();
+      std::cout << "=====================" << std::endl;
+      #endif
+      
       // Natural Selection is a bitch, kill the least fittest
       pop.elitism(&children);
       children.killEveryone();
