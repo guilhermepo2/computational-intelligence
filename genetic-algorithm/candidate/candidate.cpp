@@ -244,4 +244,6 @@ void Candidate::mutate()
   int valueP2 = this->values->getValueForLetter(this->letters[pos2]);
   this->values->setValueForLetter(this->letters[pos1], valueP2);
   this->values->setValueForLetter(this->letters[pos2], valueP1);
+
+  this->calcFitness();
 }
