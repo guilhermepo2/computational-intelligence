@@ -13,6 +13,9 @@ Population::Population(std::string op1,
   this->populationSize = populationSize;
   this->problemSize = problemSize;
   this->inicialized = false;
+#if ROULETTE
+  this->biggestWheelValue = 0;
+#endif
 }
 
 void Population::createPopulation()
@@ -136,10 +139,53 @@ int Population::tournamentSelection()
   return winner;
 }
 
+#if ROULETTE
+int Population::rouletteSelection()
+{
+  int wheelPocket = rand() % this->biggestWheelValue;
+  int chosenOne = 0;
+  int i = 0;
+  
+  while(this->candidates[i].getRouletteValue() < wheelPocket)
+    {
+      chosenOne = i;
+      i++;
+    }
+
+  return chosenOne;
+}
+
+void Population::setWheelValues()
+{
+  this->bubbleSort();
+  this->candidates[0].setRouletteValue(this->candidates[0].getFitness());
+  
+  for(int i = 1; i < this->populationSize; i++)
+    {
+      this->candidates[i].setRouletteValue(this->candidates[i-1].getRouletteValue() + this->candidates[i].getFitness());
+    }
+  
+  this->biggestWheelValue = this->candidates[this->populationSize - 1].getRouletteValue();
+}
+#endif
+
 void Population::crossover(Population * children)
 {
-  int parent1 = tournamentSelection();
-  int parent2 = tournamentSelection();
+  int parent1, parent2;
+  #if ROULETTE
+  #if DEBUG
+  std::cout << "Selecao por roleta!" << std::endl;
+  #endif
+  this->setWheelValues();
+  parent1 = rouletteSelection();
+  parent2 = rouletteSelection();
+  #else
+  #if DEBUG
+  std::cout << "Selecao por torneio!" << std::endl;
+  #endif
+  parent1 = tournamentSelection();
+  parent2 = tournamentSelection();
+  #endif
 
   // GETTING THE CYCLE THING
 

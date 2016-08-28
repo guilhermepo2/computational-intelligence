@@ -4,6 +4,7 @@
 #define DEBUG 0
 #define SAVE 0
 #define SAVE_URL "results/test04.dat"
+#define ROULETTE 1
 
 #endif
 

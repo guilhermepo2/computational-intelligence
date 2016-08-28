@@ -20,6 +20,9 @@ private:
   // internal data
   bool inicialized;
   std::vector<Candidate> candidates;
+  #if ROULETTE
+  int biggestWheelValue;
+  #endif
   
 public:
   Population(std::string op1,
@@ -36,6 +39,10 @@ public:
   void insertCandidate(Candidate candidate);
   void killEveryone();
   int getSize();
+  #if ROULETTE
+  int rouletteSelection();
+  void setWheelValues();
+  #endif
   int tournamentSelection();
   void crossover(Population * children);
   void mutateOneRandom();

@@ -11,6 +11,9 @@ Candidate::Candidate(int valuesSize, std::string op1,
   this->result = result;
   this->letters = "";
   values = new AlphabetValues();
+  #if ROULETTE
+  this->roulette = 0;
+  #endif
   
   std::string tempLetters = this->op1 + this->op2 + this->result;
 
@@ -247,3 +250,15 @@ void Candidate::mutate()
 
   this->calcFitness();
 }
+
+#if ROULETTE
+void Candidate::setRouletteValue(int roulette)
+{
+  this->roulette = roulette;
+}
+
+int Candidate::getRouletteValue()
+{
+  return this->roulette;
+}
+#endif

@@ -18,6 +18,9 @@ private:
   AlphabetValues * values;
   int fitness;
   int size;
+#if ROULETTE
+  int roulette;
+#endif
 public:
   Candidate(int valuesSize, std::string op1,
 	    std::string op2, std::string result);
@@ -36,9 +39,12 @@ public:
   int getValue(int pos);
   int getPositionForValue(int value);
   void setValueForPosition(int position, int value);
-
   // for mutation
   void mutate();
+#if ROULETTE
+  void setRouletteValue(int roulette);
+  int getRouletteValue();
+#endif
 };
 
 #endif
