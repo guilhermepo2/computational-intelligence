@@ -1,0 +1,49 @@
+Testes a se fazer no algoritmo genético com a solução de SEND + MORE = MONEY
+
+Gerações: 50
+Tamanho da População: 100
+Crossover 60% e 80%
+Crossover: Cíclico e PMX
+Mutação: 1%, 5% e 10%
+Seleção por Torneio (tour = 3) e por roleta
+Reinserção Ordenada e Elitismo de 20%
+
+O que ainda deve ser implementado: Crossover PMX e Elitismo
+
+Testes a se fazer:
+Crossover 60%, Crossover Ciclico, Mutação 1%, Seleção por Torneio e Reinserção Ordenada
+Crossover 80%, Crossover Ciclico, Mutação 1%, Seleção por Torneio e Reinserção Ordenada
+Crossover 80%, Crossover Ciclico, Mutação 1%, Seleção por Torneio e Elitismo 20%
+Crossover 60%, Crossover Ciclico, Mutação 1%, Seleção por Roleta e Reinserção Ordenada
+Crossover 80%, Crossover Ciclico, Mutação 1%, Seleção por Roleta e Reinserção Ordenada
+Crossover 80%, Crossover Ciclico, Mutação 1%, Seleção por Roleta e Elitismo 20%
+Crossover 60%, Crossover Ciclico, Mutação 5%, Seleção por Torneio e Reinserção Ordenada
+Crossover 80%, Crossover Ciclico, Mutação 5%, Seleção por Torneio e Reinserção Ordenada
+Crossover 80%, Crossover Ciclico, Mutação 5%, Seleção por Torneio e Elitismo 20%
+Crossover 60%, Crossover Ciclico, Mutação 5%, Seleção por Roleta e Reinserção Ordenada
+Crossover 80%, Crossover Ciclico, Mutação 5%, Seleção por Roleta e Reinserção Ordenada
+Crossover 80%, Crossover Ciclico, Mutação 5%, Seleção por Roleta e Elitismo 20%
+Crossover 60%, Crossover Ciclico, Mutação 10%, Seleção por Torneio e Reinserção Ordenada
+Crossover 80%, Crossover Ciclico, Mutação 10%, Seleção por Torneio e Reinserção Ordenada
+Crossover 80%, Crossover Ciclico, Mutação 10%, Seleção por Torneio e Elitismo 20%
+Crossover 60%, Crossover Ciclico, Mutação 10%, Seleção por Roleta e Reinserção Ordenada
+Crossover 80%, Crossover Ciclico, Mutação 10%, Seleção por Roleta e Reinserção Ordenada
+Crossover 80%, Crossover Ciclico, Mutação 10%, Seleção por Roleta e Elitismo 20%
+Crossover 60%, Crossover PMX, Mutação 1%, Seleção por Torneio e Reinserção Ordenada
+Crossover 80%, Crossover PMX, Mutação 1%, Seleção por Torneio e Reinserção Ordenada
+Crossover 80%, Crossover PMX, Mutação 1%, Seleção por Torneio e Elitismo 20%
+Crossover 60%, Crossover PMX, Mutação 1%, Seleção por Roleta e Reinserção Ordenada
+Crossover 80%, Crossover PMX, Mutação 1%, Seleção por Roleta e Reinserção Ordenada
+Crossover 80%, Crossover PMX, Mutação 1%, Seleção por Roleta e Elitismo 20%
+Crossover 60%, Crossover PMX, Mutação 5%, Seleção por Torneio e Reinserção Ordenada
+Crossover 80%, Crossover PMX, Mutação 5%, Seleção por Torneio e Reinserção Ordenada
+Crossover 80%, Crossover PMX, Mutação 5%, Seleção por Torneio e Elitismo 20%
+Crossover 60%, Crossover PMX, Mutação 5%, Seleção por Roleta e Reinserção Ordenada
+Crossover 80%, Crossover PMX, Mutação 5%, Seleção por Roleta e Reinserção Ordenada
+Crossover 80%, Crossover PMX, Mutação 5%, Seleção por Roleta e Elitismo 20%
+Crossover 60%, Crossover PMX, Mutação 10%, Seleção por Torneio e Reinserção Ordenada
+Crossover 80%, Crossover PMX, Mutação 10%, Seleção por Torneio e Reinserção Ordenada
+Crossover 80%, Crossover PMX, Mutação 10%, Seleção por Torneio e Elitismo 20%
+Crossover 60%, Crossover PMX, Mutação 10%, Seleção por Roleta e Reinserção Ordenada
+Crossover 80%, Crossover PMX, Mutação 10%, Seleção por Roleta e Reinserção Ordenada
+Crossover 80%, Crossover PMX, Mutação 10%, Seleção por Roleta e Elitismo 20%
