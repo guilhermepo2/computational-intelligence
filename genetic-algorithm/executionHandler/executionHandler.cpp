@@ -98,7 +98,11 @@ void ExecutionHandler::execute()
       
       for(int i = 0; i < (children.getSize() / 2); i++)
 	{
-	  pop.crossover(&children);
+	  #if CYCLIC
+	  pop.cyclic_crossover(&children);
+	  #elif PMX
+	  pop.pmx_crossover(&children);
+	  #endif
 	}
       
       for(int i = 0; i < (pop.getPopulationSize() * this->mutationRate); i++)

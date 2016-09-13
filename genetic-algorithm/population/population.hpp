@@ -47,7 +47,10 @@ public:
   #endif
   
   int tournamentSelection();
-  void crossover(Population * children);
+  
+  void cyclic_crossover(Population * children);
+  void pmx_crossover(Population * children);
+  
   void mutateOneRandom();
   void reinsertion(Population * children);
   void elitism(Population * children);

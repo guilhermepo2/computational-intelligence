@@ -169,7 +169,97 @@ void Population::setWheelValues()
 }
 #endif
 
-void Population::crossover(Population * children)
+void Population::pmx_crossover(Population * children)
+{
+  int parent1, parent2;
+  #if ROULETTE
+  #if DEBUG
+  std::cout << "Selecao por roleta!" << std::endl;
+  #endif
+  this->setWheelValues();
+  parent1 = rouletteSelection();
+  parent2 = rouletteSelection();
+  #else
+  #if DEBUG
+  std::cout << "Selecao por torneio!" << std::endl;
+  #endif
+  parent1 = tournamentSelection();
+  parent2 = tournamentSelection();
+  #endif
+
+  // Primeiro seleciona-se uma seção no cromossomo (através de 2 Pontos de Crossover), onde o material genético dos 2 pais será integralmente trocado.
+  
+  int crossoverPoint1 = rand() % this->problemSize;
+  int crossoverPoint2 = rand() % this->problemSize;
+
+  if(crossoverPoint1 > crossoverPoint2)
+    {
+      int aux = crossoverPoint1;
+      crossoverPoint1 = crossoverPoint2;
+      crossoverPoint2 = aux;
+    }
+
+  Candidate children1(this->candidates[parent1].getSize(),
+		      this->candidates[parent1].getWord1(),
+		      this->candidates[parent1].getWord2(),
+		      this->candidates[parent1].getResultWord());
+  Candidate children2(this->candidates[parent2].getSize(),
+		      this->candidates[parent2].getWord1(),
+		      this->candidates[parent2].getWord2(),
+		      this->candidates[parent2].getResultWord());
+
+  //copying
+  for(int i = 0; i < children1.getSize(); i++)
+    {
+      int valueForC1 = this->candidates[parent1].getValue(i);
+      int valueForC2 = this->candidates[parent2].getValue(i);
+      children1.setValueForPosition(i, valueForC1);
+      children2.setValueForPosition(i, valueForC2);
+    }
+
+  for(int i = crossoverPoint1; i < crossoverPoint2; i++)
+    {
+      // get the values
+      int valueChildren1 = children1.getValue(i);
+      int valueChildren2 = children2.getValue(i);
+
+      // antes de trocar eu verifico onde esta o valor do children2 no children1 e troco pelo valor do children1 que esta dentro do crossover
+      int collisionPositionChildren1 = this->candidates[parent1].getPositionForValue(valueChildren2);
+      int collisionPositionChildren2 = this->candidates[parent2].getPositionForValue(valueChildren1);
+
+      children1.setValueForPosition(collisionPositionChildren1, valueChildren1);
+      children2.setValueForPosition(collisionPositionChildren2, valueChildren2);
+
+      // now trade them
+      children2.setValueForPosition(i, valueChildren1);
+      children1.setValueForPosition(i, valueChildren2);
+    }
+
+  children1.calcFitness();
+  children2.calcFitness();
+  // HERE IT SHOULD BE WORKING...
+
+   #if DEBUG
+  std::cout << "============================" << std::endl;
+  std::cout << "PMX CROSSOVER RESULT" << std::endl;
+  std::cout << "PARENT 1" << std::endl;
+  this->candidates[parent1].printLettersAndValues();
+  std::cout << "PARENT 2" << std::endl;
+  this->candidates[parent2].printLettersAndValues();
+  std::cout << "CHILDREN 1" << std::endl;
+  children1.printLettersAndValues();
+  std::cout << "CHILDREN 2" << std::endl;
+  children2.printLettersAndValues();
+  std::cout << "============================" << std::endl;
+  #endif
+
+  // here I have two children, what to do now?
+  // push them to the beta population!
+  children->insertCandidate(children1);
+  children->insertCandidate(children2);
+}
+
+void Population::cyclic_crossover(Population * children)
 {
   int parent1, parent2;
   #if ROULETTE

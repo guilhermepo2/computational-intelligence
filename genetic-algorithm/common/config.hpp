@@ -10,8 +10,8 @@
 #define TOURNAMENT 0
 
 // crossover
-#define CYCLIC 1
-#define PMX 0              // implementar
+#define CYCLIC 0
+#define PMX 1
 
 // selecao
 #define REINSERTION 1
