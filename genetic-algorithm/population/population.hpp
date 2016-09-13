@@ -25,6 +25,7 @@ private:
   #endif
   
 public:
+  inline int getPopulationSize() const { return this->populationSize; }
   Population(std::string op1,
 	     std::string op2,
 	     std::string result,
@@ -39,13 +40,16 @@ public:
   void insertCandidate(Candidate candidate);
   void killEveryone();
   int getSize();
+  
   #if ROULETTE
   int rouletteSelection();
   void setWheelValues();
   #endif
+  
   int tournamentSelection();
   void crossover(Population * children);
   void mutateOneRandom();
+  void reinsertion(Population * children);
   void elitism(Population * children);
   void saveData(std::string url);
   int getBestFitness();

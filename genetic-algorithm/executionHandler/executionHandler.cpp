@@ -18,10 +18,54 @@ ExecutionHandler::ExecutionHandler(std::string op1,
   this->problemSize    = stoi(problemSize);
   this->crossoverRate  = stof(crossoverRate);
   this->mutationRate   = stof(mutationRate);
+
+  // printing info on config
+  std::cout << "================================" << std::endl;
+  #if DEBUG
+  std::cout << "Debug mode activated." << std::endl;
+  #else
+  std::cout << "Debug mode deactivated." << std::endl;
+  #endif
+
+  #if SAVE
+  std::cout << "Saving ON, url: " << SAVE_URL << std::endl;
+  #endif
+
+  #if ROULETTE
+  std::cout << "Selection method: Roulette" << std::endl;
+  #elif TOURNAMENT
+  std::cout << "Selection method: Tournament" << std::endl;
+  #else
+  std::cout << "No Selection method, please edit the config file" << std::endl;
+  exit(0);
+  #endif
+
+  #if CYCLIC
+  std::cout << "Crossover method: Cyclic" << std::endl;
+  #elif PMX
+  std::cout << "Crossover method: PMX" << std::endl;
+  #else
+  std::cout << "No crossover method selected, please edit the config file" << std::endl;
+  exit(0);
+  #endif
+
+  #if REINSERTION
+  std::cout << "Survival Method: Reinsertion" << std::endl;
+  #elif ELITISM
+  std::cout << "Survival Method: Elitism" << std::endl;
+  #else
+  std::cout << "No survival method selected, please edit the config file" << std::endl;
+  exit(0);
+  #endif
+
+  #if SLEEP
+  std::cout << "Program will asleep after one execution" << std::endl;
+  #endif
+  std::cout << "================================" << std::endl;
 }
 
 void ExecutionHandler::execute()
-{
+{ 
   Population pop(this->op1,
 		 this->op2,
 		 this->result,
@@ -51,11 +95,14 @@ void ExecutionHandler::execute()
   for(gen = 0; gen < this->generations; gen++)
     {
       std::cout << "Generation: " << gen+1 << std::endl;
+      
       for(int i = 0; i < (children.getSize() / 2); i++)
 	{
 	  pop.crossover(&children);
 	}
-      children.mutateOneRandom();
+      
+      for(int i = 0; i < (pop.getPopulationSize() * this->mutationRate); i++)
+	children.mutateOneRandom();
       
       #if DEBUG
       std::cout << "=====================" << std::endl;
@@ -68,7 +115,13 @@ void ExecutionHandler::execute()
       #endif
       
       // Natural Selection is a bitch, kill the least fittest
+
+      #if REINSERTION
+      pop.reinsertion(&children);
+      #elif ELITISM
       pop.elitism(&children);
+      #endif
+      
       children.killEveryone();
     }
   pop.printBestCandidate();
@@ -94,9 +147,10 @@ void ExecutionHandler::execute()
   // final judgment is here (end of this test)
   pop.killEveryone();
   children.killEveryone();
-  
+
+  #if SLEEP
   //sleep a little bit... so the clock can work a bit
   std::cout << "Sleeping..." << std::endl;
   std::this_thread::sleep_for(std::chrono::milliseconds(100));
-  std::cout << "안년하세요" << std::endl;
+  #endif
 }

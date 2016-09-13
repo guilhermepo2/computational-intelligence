@@ -319,6 +319,49 @@ void Population::mutateOneRandom()
 
 void Population::elitism(Population * children)
 {
+#if DEBUG
+  std::cout << "=================================" << std::endl;
+  std::cout << "POPULATION FITNESS BEFORE ELITISM" << std::endl;
+  this->printAllFitness();
+  std::cout << "=================================" << std::endl;
+#endif
+  
+  this->bubbleSort();
+  children->bubbleSort();
+
+  int elite;
+  
+  if(children->getPopulationSize() > this->populationSize)
+    elite = 0;
+  else
+    elite = (this->populationSize - children->getPopulationSize());
+
+  int childrenIndex = 0;
+  for(int i = elite; i < this->populationSize; i++)
+    {
+      for(int j = 0; j < this->candidates[i].getSize(); j++)
+	{
+	  this->candidates[i].setValueForPosition(j,
+						  children->candidates[childrenIndex].getValue(j));
+	}
+      this->candidates[i].calcFitness();
+      childrenIndex++;
+    }
+  this->bubbleSort();
+
+#if DEBUG
+  std::cout << "=================================" << std::endl;
+  std::cout << "POPULATION FITNESS AFTER ELITISM" << std::endl;
+  this->printAllFitness();
+  std::cout << "=================================" << std::endl;
+#endif
+    
+
+  
+}
+
+void Population::reinsertion(Population * children)
+{
   #if DEBUG
   std::cout << "=================================" << std::endl;
   std::cout << "POPULATION FITNESS BEFORE ELITISM" << std::endl;

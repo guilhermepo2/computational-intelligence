@@ -4,7 +4,22 @@
 #define DEBUG 0
 #define SAVE 0
 #define SAVE_URL "results/test04.dat"
+
+// selection
 #define ROULETTE 1
+#define TOURNAMENT 0
+
+// crossover
+#define CYCLIC 1
+#define PMX 0              // implementar
+
+// selecao
+#define REINSERTION 1
+#define ELITISM 0
+
+// sleep
+#define SLEEP 1
+
 
 #endif
 
