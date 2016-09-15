@@ -2,6 +2,7 @@
 #define CONFIG_HEADER
 
 #define DEBUG 0
+#define PRINT 0
 #define SAVE 0
 #define SAVE_URL "results/test04.dat"
 
@@ -14,11 +15,11 @@
 #define PMX 1
 
 // selecao
-#define REINSERTION 1
-#define ELITISM 0
+#define REINSERTION 0
+#define ELITISM 1
 
 // sleep
-#define SLEEP 1
+#define SLEEP 0
 
 
 #endif

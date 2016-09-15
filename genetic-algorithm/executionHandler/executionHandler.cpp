@@ -65,7 +65,10 @@ ExecutionHandler::ExecutionHandler(std::string op1,
 }
 
 void ExecutionHandler::execute()
-{ 
+{
+  // medir tempo
+  clock_t inicio = clock();
+  
   Population pop(this->op1,
 		 this->op2,
 		 this->result,
@@ -94,7 +97,9 @@ void ExecutionHandler::execute()
   int gen;
   for(gen = 0; gen < this->generations; gen++)
     {
+      #if PRINT
       std::cout << "Generation: " << gen+1 << std::endl;
+      #endif
       
       for(int i = 0; i < (children.getSize() / 2); i++)
 	{
@@ -104,9 +109,11 @@ void ExecutionHandler::execute()
 	  pop.pmx_crossover(&children);
 	  #endif
 	}
-      
+
       for(int i = 0; i < (pop.getPopulationSize() * this->mutationRate); i++)
-	children.mutateOneRandom();
+	{
+	  children.mutateOneRandom();
+	}
       
       #if DEBUG
       std::cout << "=====================" << std::endl;
@@ -128,6 +135,11 @@ void ExecutionHandler::execute()
       
       children.killEveryone();
     }
+  
+  clock_t fim = clock();
+
+  double tempo_exec = double(fim - inicio) / CLOCKS_PER_SEC;
+  
   pop.printBestCandidate();
   
 #if SAVE
@@ -147,6 +159,10 @@ void ExecutionHandler::execute()
       ok << "got the 100000 fitness\n";
       ok.close();
     }
+  std::ofstream time;
+  time.open("time.txt", std::ios::app);
+  time << tempo_exec << "\n";
+  time.close();
   
   // final judgment is here (end of this test)
   pop.killEveryone();

@@ -11,9 +11,5 @@ def performTest(word1, word2, word3, pop, gen, psize, cross, mut, q_tests)
   exec for_string
 end
 
-
-#teste para ver melhoramento, 1 geracao, 50 vezes
-#performTest("SEND", "MORE", "MONEY", 100, 1, 10, 0.60, 0.01, 50)
-
 # teste para convergencia, 50 geracoes, 1000 vezes
-performTest("SEND", "MORE", "MONEY", 100, 50, 10, 0.60, 0.01, 1000)
+performTest("SEND", "MORE", "MONEY", 100, 50, 10, 0.80, 0.10, 1000)
