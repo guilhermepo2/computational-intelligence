@@ -83,7 +83,6 @@ void ExecutionHandler::execute()
 
   srand(time(NULL));
   pop.createPopulation();
-  pop.bubbleSort();
   
 #if SAVE
   std::ofstream file;
@@ -97,6 +96,8 @@ void ExecutionHandler::execute()
   int gen;
   for(gen = 0; gen < this->generations; gen++)
     {
+      pop.quickSort(0,pop.getPopulationSize()-1);
+      
       #if PRINT
       std::cout << "Generation: " << gen+1 << std::endl;
       #endif

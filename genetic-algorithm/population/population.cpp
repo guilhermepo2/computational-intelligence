@@ -45,6 +45,7 @@ void Population::calculatePopulationFitness()
     }
 }
 
+/*
 void Population::bubbleSort()
 {
   Candidate c(this->problemSize, this->op1, this->op2, this->result);
@@ -59,6 +60,45 @@ void Population::bubbleSort()
 	      candidates[j] = c;
 	    }
 	}
+    }
+    } */
+
+void Population::quickSort(int l, int r)
+{
+  int i, j;
+  i = l;
+  j = r;
+
+  Candidate c(this->problemSize, this->op1, this->op2, this->result);
+  Candidate c2(this->problemSize, this->op1, this->op2, this->result);
+
+  c = this->candidates[(l+r)/2];
+
+  while(i <= j)
+    {
+      while(this->candidates[i].getFitness() > c.getFitness() && i < r)
+	i++;
+
+      while(this->candidates[j].getFitness() < c.getFitness() && j > l)
+	j--;
+
+      if(i <= j)
+	{
+	  c2 = this->candidates[i];
+	  this->candidates[i] = this->candidates[j];
+	  this->candidates[j] = c2;
+	  i++;
+	  j--;
+	}
+    }
+
+  if(j > l)
+    {
+      this->quickSort(l, j);
+    }
+  if(i < r)
+    {
+      this->quickSort(i, r);
     }
 }
 
@@ -157,7 +197,6 @@ int Population::rouletteSelection()
 
 void Population::setWheelValues()
 {
-  this->bubbleSort();
   this->candidates[0].setRouletteValue(this->candidates[0].getFitness());
   
   for(int i = 1; i < this->populationSize; i++)
@@ -416,8 +455,7 @@ void Population::elitism(Population * children)
   std::cout << "=================================" << std::endl;
 #endif
   
-  this->bubbleSort();
-  children->bubbleSort();
+  children->quickSort(0, children->getPopulationSize()-1);
 
   int elite;
   
@@ -437,7 +475,6 @@ void Population::elitism(Population * children)
       this->candidates[i].calcFitness();
       childrenIndex++;
     }
-  this->bubbleSort();
 
 #if DEBUG
   std::cout << "=================================" << std::endl;
@@ -445,8 +482,6 @@ void Population::elitism(Population * children)
   this->printAllFitness();
   std::cout << "=================================" << std::endl;
 #endif
-    
-
   
 }
 
@@ -459,26 +494,24 @@ void Population::reinsertion(Population * children)
   std::cout << "=================================" << std::endl;
   #endif
   
-  this->bubbleSort();
-  children->bubbleSort();
+  children->quickSort(0,children->getPopulationSize()-1);
 
   for(int i = 0; i < children->getSize(); i++)
     {
       if(children->candidates[i].getFitness() >
-	 this->candidates[this->populationSize - 1].getFitness())
+	 this->candidates[this->populationSize - (i+1)].getFitness())
 	{
 	  for(int j = 0;
-	      j < this->candidates[this->populationSize - 1].getSize();
+	      j < this->candidates[this->populationSize - (i+1)].getSize();
 	      j++)
 	    {
-	      this->candidates[this->populationSize - 1].setValueForPosition(j,
+	      this->candidates[this->populationSize - (i+1)].setValueForPosition(j,
 									     children->candidates[i].getValue(j));
 	    }
-	  this->candidates[this->populationSize-1].calcFitness();
-	  this->bubbleSort();
+	  this->candidates[this->populationSize-(i+1)].calcFitness();
 	}
     }
-
+  
 #if DEBUG
   std::cout << "=================================" << std::endl;
   std::cout << "POPULATION FITNESS AFTER ELITISM" << std::endl;
@@ -540,6 +573,5 @@ void Population::saveData(std::string url)
 
 int Population::getBestFitness()
 {
-  this->bubbleSort();
   return this->candidates[0].getFitness();
 }

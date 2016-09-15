@@ -34,7 +34,10 @@ public:
   void createPopulation();
   void printAllFitness();
   void calculatePopulationFitness();
+  
   void bubbleSort();
+  void quickSort(int l, int r);
+  
   void printBestCandidate();
   void printEverything();
   void insertCandidate(Candidate candidate);

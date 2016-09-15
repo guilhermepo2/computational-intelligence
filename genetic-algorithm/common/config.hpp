@@ -15,8 +15,8 @@
 #define PMX 1
 
 // selecao
-#define REINSERTION 0
-#define ELITISM 1
+#define REINSERTION 1
+#define ELITISM 0
 
 // sleep
 #define SLEEP 0
