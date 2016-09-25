@@ -14,3 +14,5 @@ end
 
 puts "Convergencia: #{fitness_total/10.0}%"
 puts "Tempo total: #{tempo}"
+
+exec ("rm " + file + "; rm " + time)

@@ -18,6 +18,26 @@ Population::Population(std::string op1,
 #endif
 }
 
+bool Population::verifyNotRepeated(int pos)
+{
+  bool repeated = false;
+  for(int i = 0; i < pos; i++)
+    {
+      repeated = true;
+      for(int j = 0; j < this->problemSize; j++)
+	{
+	  
+	  if(candidates[i].getValue(j) != candidates[pos].getValue(j))
+	    repeated = false;
+	}
+
+      if(repeated)
+	break;
+    }
+
+  return repeated;
+}
+
 void Population::createPopulation()
 {
   if(!this->inicialized)
@@ -30,6 +50,8 @@ void Population::createPopulation()
     for(int i = 0; i < this->populationSize; i++)
       {
 	candidates[i].createRandomCandidate();
+	if(this->verifyNotRepeated(i))
+	  i--;
       }
     this->inicialized = true;
   }
@@ -182,9 +204,21 @@ int Population::tournamentSelection()
 #if ROULETTE
 int Population::rouletteSelection()
 {
+#if DEBUG
+  std::cout << "Selecionando pela roleta!" << std::endl;
+#endif
+
+#if DEBUG
+      std::cout << "biggest wheel value: " << this->biggestWheelValue << std::endl;
+#endif
+  
   int wheelPocket = rand() % this->biggestWheelValue;
   int chosenOne = 0;
   int i = 0;
+  
+#if DEBUG
+  std::cout << "WheelPocket: " << wheelPocket << std::endl;
+#endif
   
   while(this->candidates[i].getRouletteValue() < wheelPocket)
     {
@@ -197,11 +231,19 @@ int Population::rouletteSelection()
 
 void Population::setWheelValues()
 {
+#if DEBUG
+  std::cout << "Colocando os valores de roleta!" << std::endl;
+#endif
+  
   this->candidates[0].setRouletteValue(this->candidates[0].getFitness());
   
   for(int i = 1; i < this->populationSize; i++)
     {
       this->candidates[i].setRouletteValue(this->candidates[i-1].getRouletteValue() + this->candidates[i].getFitness());
+#if DEBUG
+      std::cout << "candidate fitness: " << this->candidates[i].getFitness() << std::endl;
+      std::cout << "wheel pocket value: " << this->candidates[i].getRouletteValue() << std::endl;
+#endif
     }
   
   this->biggestWheelValue = this->candidates[this->populationSize - 1].getRouletteValue();
@@ -227,6 +269,10 @@ void Population::pmx_crossover(Population * children)
   #endif
 
   // Primeiro seleciona-se uma seção no cromossomo (através de 2 Pontos de Crossover), onde o material genético dos 2 pais será integralmente trocado.
+
+#if DEBUG
+  std::cout << "Selecionei! Agora PMX!" << std::endl;
+#endif
   
   int crossoverPoint1 = rand() % this->problemSize;
   int crossoverPoint2 = rand() % this->problemSize;

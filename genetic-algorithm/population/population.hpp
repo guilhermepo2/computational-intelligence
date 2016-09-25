@@ -31,6 +31,9 @@ public:
 	     std::string result,
 	     int populationSize,
 	     int problemSize);
+
+  bool verifyNotRepeated(int pos);
+    
   void createPopulation();
   void printAllFitness();
   void calculatePopulationFitness();

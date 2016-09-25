@@ -93,6 +93,11 @@ void Candidate::calcFitness()
     }
 
   this->fitness = (100000 - labs(word1+word2 - result));
+  
+  // this candidate is so awful that i made me treat him as an exception on my code
+  
+  if(this->fitness < 0)
+    this->fitness = 1;
   //this->fitness = labs(word1 + word2 - result);
 }
 
