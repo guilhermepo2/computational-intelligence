@@ -39,6 +39,7 @@ int main(int argc, char * argv[])
 				    argv[7],
 				    argv[8]);
 
+  #if PRINT_ESSENTIAL
   std::cout << "Problem:\t\t"
 	    << argv[1] << " + "
 	    << argv[2] << " = "
@@ -55,6 +56,7 @@ int main(int argc, char * argv[])
 
   std::cout << "=======================================" << std::endl;
   std::cout << "Executing Algorithm..." << std::endl;
+  #endif
   executionHandler.execute();
   return 0;
 }

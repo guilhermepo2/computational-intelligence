@@ -250,6 +250,7 @@ void Population::setWheelValues()
 }
 #endif
 
+
 void Population::pmx_crossover(Population * children)
 {
   int parent1, parent2;
@@ -319,7 +320,7 @@ void Population::pmx_crossover(Population * children)
       children2.setValueForPosition(i, valueChildren1);
       children1.setValueForPosition(i, valueChildren2);
     }
-
+  
   children1.calcFitness();
   children2.calcFitness();
   // HERE IT SHOULD BE WORKING...
@@ -340,8 +341,19 @@ void Population::pmx_crossover(Population * children)
 
   // here I have two children, what to do now?
   // push them to the beta population!
+  #if CROSSOVER_ONLY_BETTER
+  if(children1.getFitness() >= this->candidates[parent1].getFitness() &&
+     children1.getFitness() >= this->candidates[parent2].getFitness())
+    children->insertCandidate(children1);
+
+  if(children2.getFitness() >= this->candidates[parent1].getFitness() &&
+     children2.getFitness() >= this->candidates[parent2].getFitness())
+    children->insertCandidate(children2);
+  
+  #else
   children->insertCandidate(children1);
   children->insertCandidate(children2);
+  #endif
 }
 
 void Population::cyclic_crossover(Population * children)
@@ -521,7 +533,7 @@ void Population::elitism(Population * children)
       this->candidates[i].calcFitness();
       childrenIndex++;
     }
-
+  
 #if DEBUG
   std::cout << "=================================" << std::endl;
   std::cout << "POPULATION FITNESS AFTER ELITISM" << std::endl;
@@ -552,7 +564,7 @@ void Population::reinsertion(Population * children)
 	      j++)
 	    {
 	      this->candidates[this->populationSize - (i+1)].setValueForPosition(j,
-									     children->candidates[i].getValue(j));
+										 children->candidates[i].getValue(j));
 	    }
 	  this->candidates[this->populationSize-(i+1)].calcFitness();
 	}

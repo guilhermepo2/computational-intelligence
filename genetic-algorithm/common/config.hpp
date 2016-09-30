@@ -3,6 +3,7 @@
 
 #define DEBUG 0
 #define PRINT 0
+#define PRINT_ESSENTIAL 1
 #define SAVE 0
 #define SAVE_URL "results/test04.dat"
 
@@ -11,15 +12,22 @@
 #define TOURNAMENT 0
 
 // crossover
-#define CYCLIC 0
-#define PMX 1
+#define CYCLIC 1
+#define PMX 0
 
 // selecao
 #define REINSERTION 0
 #define ELITISM 1
 
 // sleep
-#define SLEEP 1
+#define SLEEP 0
+
+// fitness
+#define REGULAR_FITNESS 1
+
+// other options
+#define MUTATE_ONLY_IF_BETTER 0
+#define CROSSOVER_ONLY_BETTER 0
 
 
 #endif

@@ -26,6 +26,7 @@ private:
   
 public:
   inline int getPopulationSize() const { return this->populationSize; }
+  inline int getCandidatesCount() const { return this->candidates.size(); }
   Population(std::string op1,
 	     std::string op2,
 	     std::string result,

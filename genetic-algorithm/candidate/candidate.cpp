@@ -67,6 +67,7 @@ int Candidate::getFitness()
   return this->fitness;
 }
 
+#if REGULAR_FITNESS
 void Candidate::calcFitness()
 {
   int fitness;
@@ -100,6 +101,90 @@ void Candidate::calcFitness()
     this->fitness = 1;
   //this->fitness = labs(word1 + word2 - result);
 }
+#else
+//fitness must be:
+// 1 - an integer
+// 2 - the higher the better
+// lets try: subtract individual numbers and sum them
+void Candidate::calcFitness()
+{
+  int fitSize = this->result.size();
+  int * fitness_vector = new int[fitSize];
+
+  // should always be true but anyway
+  if(this->op1.size() == this->op2.size())
+    {
+      int operands_actual = this->op1.size() - 1;
+      int result_actual = fitSize - 1;
+      int one_up = 0;
+
+      int left_side;
+      int right_side;
+      
+      for(int i = 0; i < fitSize; i++) fitness_vector[i] = 0;
+      
+      for(int i = 0; i < (this->op1.size() - 1); i++)
+	{
+	  left_side = (this->values->getValueForLetter(this->result[result_actual]));
+	  right_side =
+	    ((this->values->getValueForLetter(this->op1[operands_actual]))
+	     +(this->values->getValueForLetter(this->op2[operands_actual]))+one_up);
+
+	  if(right_side >= 10)
+	    {
+	      right_side -= 10;
+	      one_up = 1;
+	    }
+	  else
+	    one_up = 0;
+	  
+	  fitness_vector[result_actual] = labs(left_side - right_side);
+
+	  result_actual--;
+	  operands_actual--;
+	}
+
+      left_side = ((this->values->getValueForLetter(this->result[result_actual-1]) * 10) + this->values->getValueForLetter(this->result[result_actual]));
+      
+      right_side =
+	((this->values->getValueForLetter(this->op1[operands_actual]))
+	 +(this->values->getValueForLetter(this->op2[operands_actual]))+one_up);
+      
+      fitness_vector[result_actual] = labs(left_side - right_side);
+
+      // now i have my fitness vector
+      // fitness will be sum multiplied by 10 ^ (0 counts)
+      int zeros = 0;
+      int sum = 0;
+      for(int i = 1; i < fitSize; i++)
+	{
+	  if(fitness_vector[i] == 0) zeros++;
+	  else sum += fitness_vector[i];
+	}
+
+#if DEBUG
+      std::cout << "fitness vector: " << std::endl;
+      for(int i = 0; i < fitSize; i++)
+	{
+	  std::cout << fitness_vector[i] << " ";
+	}
+      std::cout << "\nzeros: " << zeros << std::endl;
+      std::cout << "sum: " << sum << std::endl;
+#endif
+
+      this->fitness = ((100 * (pow(10,zeros)) - sum));
+
+      #if DEBUG
+      std::cout << "fitness: " << this->fitness << std::endl;
+      #endif
+    }
+  else
+    {
+      std::cout << "Error." << std::endl;
+      exit(1);
+    }
+}
+#endif
 
 void Candidate::printCandidate()
 {
@@ -246,6 +331,10 @@ std::string Candidate::getLettersWord()
 
 void Candidate::mutate()
 {
+  #if MUTATE_ONLY_IF_BETTER
+  int oldfitness = this->fitness;
+  #endif
+  
   int pos1 = rand() % this->letters.size();
   int pos2 = rand() % this->letters.size();
   int valueP1 = this->values->getValueForLetter(this->letters[pos1]);
@@ -254,6 +343,16 @@ void Candidate::mutate()
   this->values->setValueForLetter(this->letters[pos2], valueP1);
 
   this->calcFitness();
+
+  #if MUTATE_ONLY_IF_BETTER
+  if(this->fitness < oldfitness)
+    {
+      this->values->setValueForLetter(this->letters[pos1], valueP1);
+      this->values->setValueForLetter(this->letters[pos2], valueP2);
+
+      this->calcFitness();
+    }
+  #endif
 }
 
 #if ROULETTE

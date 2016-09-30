@@ -20,6 +20,7 @@ ExecutionHandler::ExecutionHandler(std::string op1,
   this->mutationRate   = stof(mutationRate);
 
   // printing info on config
+  #if PRINT_ESSENTIAL
   std::cout << "================================" << std::endl;
   #if DEBUG
   std::cout << "Debug mode activated." << std::endl;
@@ -44,6 +45,8 @@ ExecutionHandler::ExecutionHandler(std::string op1,
   std::cout << "Crossover method: Cyclic" << std::endl;
   #elif PMX
   std::cout << "Crossover method: PMX" << std::endl;
+  #elif PMX_CYCLIC
+  std::cout << "Crossover method: Cyclic and PMX" << std::endl;
   #else
   std::cout << "No crossover method selected, please edit the config file" << std::endl;
   exit(0);
@@ -62,6 +65,7 @@ ExecutionHandler::ExecutionHandler(std::string op1,
   std::cout << "Program will asleep after one execution" << std::endl;
   #endif
   std::cout << "================================" << std::endl;
+  #endif
 }
 
 void ExecutionHandler::execute()
@@ -101,7 +105,17 @@ void ExecutionHandler::execute()
       #if PRINT
       std::cout << "Generation: " << gen+1 << std::endl;
       #endif
-      
+
+      #if CROSSOVER_ONLY_BETTER
+      while(children.getCandidatesCount() != children.getPopulationSize())
+	{
+#if CYCLIC
+	  pop.cyclic_crossover(&children);
+#elif PMX
+	  pop.pmx_crossover(&children);
+#endif
+	}
+      #else
       for(int i = 0; i < (children.getSize() / 2); i++)
 	{
 	  #if CYCLIC
@@ -110,6 +124,7 @@ void ExecutionHandler::execute()
 	  pop.pmx_crossover(&children);
 	  #endif
 	}
+      #endif
 
       for(int i = 0; i < (pop.getPopulationSize() * this->mutationRate); i++)
 	{
@@ -140,8 +155,10 @@ void ExecutionHandler::execute()
   clock_t fim = clock();
 
   double tempo_exec = double(fim - inicio) / CLOCKS_PER_SEC;
-  
+
+  #if PRINT_ESSENTIAL
   pop.printBestCandidate();
+  #endif
   
 #if SAVE
   file.open(SAVE_URL, std::ios::app);
@@ -171,7 +188,9 @@ void ExecutionHandler::execute()
 
   #if SLEEP
   //sleep a little bit... so the clock can work a bit
+  #if PRINT_ESSENTIAL
   std::cout << "Sleeping..." << std::endl;
+  #endif
   std::this_thread::sleep_for(std::chrono::milliseconds(100));
   #endif
 }

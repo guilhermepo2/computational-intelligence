@@ -11,6 +11,5 @@ def performTest(word1, word2, word3, pop, gen, psize, cross, mut, q_tests)
   exec for_string
 end
 
-# teste para convergencia, 50 geracoes, 1000 vezes
 #            XXXX +  XXXX  = XXXXX   pop ger tam cross mutac  vezes
-performTest("SEND", "MORE", "MONEY", 200, 1000, 10, 0.80, 0.25, 1000)
+performTest("CROSS", "ROADS", "DANGER", 100, 50, 10, 0.80, 0.10, 1000)
