@@ -9,7 +9,6 @@ int main()
   Population children("SEND", "MORE", "MONEY", 60, 1, 10, 0.0, 0.01);
   pop.createPopulation();               // OK
   pop.calculatePopulationFitness();     // OK
-  pop.bubbleSort();
   pop.printAllFitness();
   
   for(int i = 0; i < (children.getSize() / 2); i++)

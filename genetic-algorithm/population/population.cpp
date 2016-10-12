@@ -253,6 +253,9 @@ void Population::setWheelValues()
 
 void Population::pmx_crossover(Population * children)
 {
+  #if DEBUG_PMX
+  std::cout << "=============================================================" << std::endl;
+  #endif
   int parent1, parent2;
   #if ROULETTE
   #if DEBUG
@@ -303,15 +306,32 @@ void Population::pmx_crossover(Population * children)
       children2.setValueForPosition(i, valueForC2);
     }
 
+  #if DEBUG_PMX
+  std::cout << "crossover point 1: " << crossoverPoint1 << " crossover point 2: " << crossoverPoint2 << std::endl;
+  #endif
+
   for(int i = crossoverPoint1; i < crossoverPoint2; i++)
     {
+      #if DEBUG_PMX
+      std::cout << "iteracao i = " << i << std::endl;
+      children1.printCandidate();
+      children2.printCandidate();
+      #endif
       // get the values
       int valueChildren1 = children1.getValue(i);
       int valueChildren2 = children2.getValue(i);
 
+        #if DEBUG_PMX
+  std::cout << "value children 1: " << valueChildren1 << " value children 2: " << valueChildren2 << std::endl;
+  #endif
+
       // antes de trocar eu verifico onde esta o valor do children2 no children1 e troco pelo valor do children1 que esta dentro do crossover
       int collisionPositionChildren1 = this->candidates[parent1].getPositionForValue(valueChildren2);
       int collisionPositionChildren2 = this->candidates[parent2].getPositionForValue(valueChildren1);
+      
+#if DEBUG_PMX
+      std::cout << "collision point 1: " << collisionPositionChildren1 << " collision point 2: " << collisionPositionChildren2 << std::endl;
+#endif
 
       children1.setValueForPosition(collisionPositionChildren1, valueChildren1);
       children2.setValueForPosition(collisionPositionChildren2, valueChildren2);

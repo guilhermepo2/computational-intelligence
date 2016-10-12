@@ -2,6 +2,7 @@
 #define CONFIG_HEADER
 
 #define DEBUG 0
+#define DEBUG_PMX 1
 #define PRINT 0
 #define PRINT_ESSENTIAL 1
 #define SAVE 0
@@ -12,8 +13,8 @@
 #define TOURNAMENT 0
 
 // crossover
-#define CYCLIC 1
-#define PMX 0
+#define CYCLIC 0
+#define PMX 1
 
 // selecao
 #define REINSERTION 0
