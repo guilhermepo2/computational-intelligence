@@ -14,16 +14,38 @@ int step_function(int v)
   else return 0;
 }
 
+/*
+  Algoritmo de Treinamento da Perceptron
+
+  xi = i-esimo padrao de treinamento
+  yi = resposta da perceptron para xi
+  di = valor desejado como resposta
+
+  se di = yi -> nao faz nada
+
+  senao:
+  se di = 1 e yi = 0 -> w = w + (n * xi)
+  se di = 0 e yi = 1 -> w = w - (n * xi)
+
+  caso compacto:
+  e = di - yi
+  w = w + e * n * xi
+
+*/
+
 void Perceptron::trainment()
 {
   bool changed = false;
 
   do
     {
-      // train it
-      // 30 or 60 weights?
+      
     }while(changed);
   
+}
+
+void Perceptron::input(Pattern input)
+{
 }
 
 void Perceptron::print_weights()
