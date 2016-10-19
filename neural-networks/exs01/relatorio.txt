@@ -1,0 +1,45 @@
+Treinar uma rede perceptron com um único neurônio de saída para aprender os padrões 0 e 1
+
+a) Imprimir o vetor de pesos obtidos com o treinamento
+
+Bias = 0
+w = [
+0 -1 0 -1 0
+-1 1 1 0 -1
+-1 0 1 0 -1
+-1 0 1 0 -1
+-1 0 1 0 -1
+  1 0 0 0   1
+]
+
+b) Computar o número de épocas necessárias para aprender os padrões
+
+3 epocas.
+
+c) Investigar qual é a saída da rede quando padrões distorcidos de 0 e 1 são apresentados como entrada (inserir 10 exemplos distorcidos de cada padrão)
+
+Padroes 0
+1 distorcao:
+1 distorcao:
+2 distorcoes:
+2 distorcoes:
+3 distorcoes:
+3 distorcoes:
+4 distorcoes:
+4 distorcoes:
+5 distorcoes:
+5 distorcoes:
+
+Padroes 1
+1 distorcao:
+1 distorcao:
+2 distorcoes:
+2 distorcoes:
+3 distorcoes:
+3 distorcoes:
+4 distorcoes:
+4 distorcoes:
+5 distorcoes:
+5 distorcoes:
+
+d) Investigar qual é a saída da rede quando padrões bem diferentes de 0 e 1 são apresentados como entrada (2, 3, 4 e 5)
