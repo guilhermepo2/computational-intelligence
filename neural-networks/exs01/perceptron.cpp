@@ -97,7 +97,7 @@ int Perceptron::input(Pattern& pattern)
   input += 1 * this->bias;
   for(int i = 0; i < this->size; i++)
     {
-      input += input + (this->weights[i] * pattern.get_pattern_position(i));
+      input = input + (this->weights[i] * pattern.get_pattern_position(i));
     }
   return step_function(input);
 }

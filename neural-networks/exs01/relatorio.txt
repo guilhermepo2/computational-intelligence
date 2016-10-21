@@ -19,27 +19,34 @@ b) Computar o número de épocas necessárias para aprender os padrões
 c) Investigar qual é a saída da rede quando padrões distorcidos de 0 e 1 são apresentados como entrada (inserir 10 exemplos distorcidos de cada padrão)
 
 Padroes 0
-1 distorcao:
-1 distorcao:
-2 distorcoes:
-2 distorcoes:
-3 distorcoes:
-3 distorcoes:
-4 distorcoes:
-4 distorcoes:
-5 distorcoes:
-5 distorcoes:
+1 distorcao: reconhecido
+1 distorcao: reconhecido
+2 distorcoes: reconhecido
+2 distorcoes: reconhecido
+3 distorcoes: reconhecido
+3 distorcoes: reconhecido
+4 distorcoes: reconhecido
+4 distorcoes: reconhecido
+5 distorcoes: reconhecido
+5 distorcoes: reconhecido
 
 Padroes 1
-1 distorcao:
-1 distorcao:
-2 distorcoes:
-2 distorcoes:
-3 distorcoes:
-3 distorcoes:
-4 distorcoes:
-4 distorcoes:
-5 distorcoes:
-5 distorcoes:
+1 distorcao: reconhecido
+1 distorcao: reconhecido
+2 distorcoes: reconhecido
+2 distorcoes: reconhecido
+3 distorcoes: reconhecido
+3 distorcoes: reconhecido
+4 distorcoes: reconhecido
+4 distorcoes: reconhecido
+5 distorcoes: reconhecido
+5 distorcoes: reconhecido
 
 d) Investigar qual é a saída da rede quando padrões bem diferentes de 0 e 1 são apresentados como entrada (2, 3, 4 e 5)
+
+Padrao 0: 0
+Padrao 1: 1
+Padrao 2: 1
+Padrao 3: 0
+Padrao 4: 0
+Padrao 5: 0
