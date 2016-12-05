@@ -11,6 +11,16 @@
 # Matriz de Adjacencias
 #
 
+from math import sqrt
+
+def distance(x1, y1, x2, y2):
+    x = ((x2 - x1) ** 2)
+    y = ((y2 - y1) ** 2)
+    d = sqrt(x+y)
+
+    return d
+
+
 class Graph(object):
 
     def __init__(self, file):
@@ -33,7 +43,17 @@ class Graph(object):
                     splitted_index = splitted_index + 1
 
         elif lines[0].rstrip('\n') == "coordenates":
-            print "coordinates!"
+            cities = []
+            # print "coordinates!"
+            for i in range(2, len(lines)):
+                l = lines[i].rstrip('\n').split()
+                cities.append((float(l[0]), float(l[1])))
+            # print cities
+
+            for i in range(self.cities):
+                for j in range((i+1), self.cities):
+                    self.adj_list[i][j] = distance(cities[i][0], cities[i][1], cities[j][0], cities[j][1])
+                    self.adj_list[j][i] = distance(cities[i][0], cities[i][1], cities[j][0], cities[j][1])
 
     def print_adj_matrix(self):
         for i in range(self.cities):
@@ -48,7 +68,7 @@ class Graph(object):
 
 def tests():
     print "Executing tests."
-    g = Graph("instances/m6.txt")
+    g = Graph("instances/m38.txt")
 
     print "Cities in the graph: " + str(g.get_cities())
     print "Adjascency List:"

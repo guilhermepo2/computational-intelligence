@@ -192,9 +192,9 @@ def tests():
     print "Testing Done."
 
 def execute_aco():
-    aco = ACO("instances/m6.txt")
+    aco = ACO("instances/m38.txt")
     aco.initialize_ACO()
-    aco.show_pheromone_matrix()
+    # aco.show_pheromone_matrix()
 
 if __name__ == '__main__':
     execute_aco()
