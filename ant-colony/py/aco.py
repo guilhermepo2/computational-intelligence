@@ -4,6 +4,8 @@ from math import ceil
 from random import randint
 from random import seed
 
+import sys
+
 INITIAL_PHEROMONE = 1         # feromonio inicial
 ALPHA = 1                     # alfa
 BETA = 1                      # beta
@@ -191,10 +193,13 @@ def tests():
     #aco.show_ant_walks()
     print "Testing Done."
 
-def execute_aco():
-    aco = ACO("instances/m38.txt")
+def execute_aco(f):
+    aco = ACO(f)
     aco.initialize_ACO()
     # aco.show_pheromone_matrix()
 
 if __name__ == '__main__':
-    execute_aco()
+    if len(sys.argv) != 2:
+        print "enter file name via command line"
+    else:
+        execute_aco(sys.argv[1])
