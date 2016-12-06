@@ -7,11 +7,11 @@ from random import seed
 import sys
 
 INITIAL_PHEROMONE = 1         # feromonio inicial
-ALPHA = 1                     # alfa
-BETA = 1                      # beta
+ALPHA = 3                     # alfa
+BETA = 3                      # beta
 ATTEMPTS = 50                 # maximo de tentativas
-SECRETED_PHEROMONE = 1        # Q
-EVAPORATION_COEFFICIENT = 0.5 # p
+SECRETED_PHEROMONE = 5000        # Q
+EVAPORATION_COEFFICIENT = 0.3 # p
 
 class ACO():
     def __init__(self, file):
@@ -181,8 +181,12 @@ class ACO():
 
         print "ACO Done."
         print "Best walk for each iteration:"
-        print str(best_walks)
-        print "Best Walk overwall: " + str(min(best_walks))
+        best_walks_str = []
+        for each in best_walks:
+            best_walks_str.append(float("%.2f" % each))
+        print best_walks_str
+        print "Best Walk overwall: " + "%.2f" % min(best_walks)
+        print "Mean: " + "%.2f" % (sum(best_walks)/len(best_walks))
 
 
 def tests():
