@@ -7,15 +7,18 @@ from random import seed
 import sys
 
 INITIAL_PHEROMONE = 1         # feromonio inicial
-ALPHA = 3                     # alfa
-BETA = 3                      # beta
+ALPHA = 1                     # alfa
+BETA = 1                      # beta
 ATTEMPTS = 50                 # maximo de tentativas
 SECRETED_PHEROMONE = 5000        # Q
-EVAPORATION_COEFFICIENT = 0.3 # p
+EVAPORATION_COEFFICIENT = 0.8 # p
 
 class ACO():
     def __init__(self, file):
         self.graph = Graph(file)
+
+        self.graph.print_adj_matrix()
+
         self.ants = [Ant() for x in range(self.graph.get_cities())]
         self.pheromone_matrix = [[INITIAL_PHEROMONE for x in range(self.graph.get_cities())] for y in range(self.graph.get_cities()) ]
         for i in range(self.graph.get_cities()):
